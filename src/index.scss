@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+:root{
+  --primary-color : #D27685;
+  --seconday-color : #9E4784;
+  --tertiary-color : #71FEDD;
+  --background-color : #261e36;
+  --text-color: rgb(235, 235, 235);
+}
+
+*{
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+html, body {
+  min-height: 100%;
+  width: 100%;
+  margin: 0px;
+  overflow-x: hidden;
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Questrial', sans-serif;
+}
+body{
+  cursor: url('../public/images/cursor.png'),auto;
+}

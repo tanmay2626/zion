@@ -1,0 +1,11 @@
+#events{
+    margin-top: -80px;
+    .event-card-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px;
+        @media screen and (max-width: 980px){
+            justify-content: center;
+        }
+    }
+}

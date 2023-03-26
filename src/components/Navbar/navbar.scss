@@ -1,0 +1,118 @@
+.Navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    position: fixed;
+    height: 100px;
+    width: 100vw;
+    top: 0px;
+    z-index: 99;
+    transition: all .5s ease;
+    // -webkit-backdrop-filter: blur(18px);
+    &.notTop{
+        backdrop-filter: blur(18px);
+        background: linear-gradient(90deg, rgba(247, 245, 245, 0.541) 10%, rgba(0, 0, 0, 0.301) 70%);
+    }
+    .left{
+        font-size: 60px;
+        font-family: 'Zen Tokyo Zoo', cursive;
+        transition: all .5s ease;
+        cursor: pointer;
+        display: flex;
+        &:hover{
+            scale: 1.1;
+        }
+        img{
+            height: 80px;
+        }
+    }
+    a{
+        font-size: 22px;
+        margin-left: 50px;
+        text-decoration: none;
+        color: var(--text-color);
+    }
+    .hamburger-icon{
+        height: 20px;
+        width: 28px;
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        &:hover{
+            .line{
+                width: 10px;
+            }
+            .line:nth-child(2){
+                width: 90%;
+            }
+            .line:last-child{
+                width: 70%;
+            }
+        }
+        .line{
+            height: 3px;
+            width: 28px;
+            background-color: var(--text-color);
+            transition: all .3s ease;
+        }
+        .line:nth-child(2){
+            width: 70%;
+        }
+        .line:last-child{
+            width: 90%;
+        }
+    }
+    .hamburger-slider{
+        position: fixed;
+        top: 100px;
+        right: 0px;
+        height: calc(100vh - 100px);
+        display: flex;
+        flex-direction: column;
+        padding-left: 30px;
+        padding-top: 36px;
+        width: 70%;
+        row-gap: 22px;
+        backdrop-filter: blur(18px);
+        background-color: rgba(29, 18, 52, 0.925);
+        transform: translateX(100%);
+        transition: all .3s ease;
+        a{
+            margin: 0px;
+        }
+        &.show{
+            transform: translateX(0%);
+        }
+    }
+    .hamburger-icon{
+        display: none;
+    }
+    @media screen and (max-width:1240px) {
+        .left{
+            font-size: 30px;
+        }
+        .hamburger-icon{
+            display: flex;
+        }
+        .right{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width:1240px) {
+    .Navbar{
+        max-height: 80px;
+    }
+    .hamburger-slider{
+        top: 80px !important;
+        height: calc(100vh - 80px) !important;
+    }
+}
+.dummy-div{
+    height: 100px;
+    width: 100%;
+
+}

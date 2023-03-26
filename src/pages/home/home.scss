@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@keyframes comeAlive {
+    0% {
+        opacity : 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes upDown {
+    0% {
+        transform : translate(-50%, 0%);
+    }
+    25%{
+        transform : translate(-50%, 25%);
+    }
+    50% {
+        transform : translate(-50%, 0%);
+    }
+    75% {
+        transform : translate(-50%, -25%);
+    }
+    100% {
+        transform: translate(-50%, 0%);
+    }
+}
+#homepage{
+    position: relative;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    background: url(../../../public/images/landing.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: 2s ease-in 0s 1 comeAlive;
+    h3{
+        font-size: 36px;
+        opacity: 0.8;
+        margin:auto;
+        position: absolute;
+        left: 50%;
+        bottom: 62%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        @media screen and (max-width: 400px) {
+            font-size: 30px;
+        }
+    }
+    h2{
+        position: absolute;
+        left: 50%;
+        bottom: 50%;
+        transform: translateX(-50%);
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 112px;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0px;
+        @media screen and (max-width: 400px) {
+            font-size: 86px;
+        }
+    }
+    .time{
+        position: absolute;
+        left: 50%;
+        bottom: 45%;
+        transform: translateX(-50%);
+        font-size: 26px;
+        opacity: 0.8;
+    }
+    .explore-events{
+        position: absolute;
+        left: 50%;
+        bottom: 30%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 30px;
+        font-size: 22px;
+        color: white;
+        font-weight: 600;
+        background: #BA28FF;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all .5s ease;
+        white-space: nowrap;
+        &:hover{
+            border-color: white;
+        }
+    }
+    .over-image{
+        position: absolute;
+        top: 38px;
+        left: 155px;
+        height: 180px;
+        display: none;
+    }
+    .down-arrow{
+        position: absolute;
+        bottom: 80px;
+        left: 50%;
+        animation: 2s linear 0s infinite upDown;
+    }
+}
+section:not(#homepage){
+    padding: 70px 10%;
+    position: relative;
+    background: url(../../../public/images/stars.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    h2{
+        text-align: center;
+        font-size: 46px;
+        margin-bottom: 100px;
+    }
+    .about-card-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+        @media screen and (max-width:980px) {
+            justify-content: center;
+        }
+        div{
+            max-width: 387px;
+        }
+        img{
+            width: min(100%, 387px);
+            margin-bottom: 28px;
+        }
+    }
+}
