@@ -1,0 +1,38 @@
+.contact-container {
+    margin-top: 20px;
+    .contact-wrapper {
+    padding: 8% 10%;
+    padding-bottom: calc(8% + 20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(1px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    flex-wrap: wrap;
+    gap: 30px;
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .set-line{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .right{
+        h4{
+            margin-bottom: -10px;
+        }
+        p{
+            margin-bottom: -10px;
+        };
+    }
+  }
+}

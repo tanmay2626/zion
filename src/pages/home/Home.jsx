@@ -10,7 +10,7 @@ function Home() {
   var daydiff = Math.ceil(diff / (1000 * 60 * 60 * 24));
   return (
     <>
-      <Navbar />
+      <Navbar active={'home'}/>
       <section id="homepage">
         <h3>Utopia Unleashed</h3>
         <h2>Utopia</h2>
@@ -21,7 +21,9 @@ function Home() {
           </span>{" "}
           Days to go
         </h3>
+        <a href="#events">
         <button className="explore-events">Explore Events</button>
+        </a>
         <img
           src="./images/arrow-down.svg"
           width="40px"

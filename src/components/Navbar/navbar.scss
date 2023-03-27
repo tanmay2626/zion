@@ -32,6 +32,9 @@
         margin-left: 50px;
         text-decoration: none;
         color: var(--text-color);
+        &.active{
+            color: var(--secondary-color);
+        }
     }
     .hamburger-icon{
         height: 20px;
