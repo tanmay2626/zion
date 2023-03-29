@@ -27,3 +27,22 @@ html, body {
 body{
   cursor: url('../public/images/cursor.png'),auto;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d134c48f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d3d8ec;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #c48cd8;
+}
