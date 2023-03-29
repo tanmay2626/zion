@@ -8,6 +8,7 @@ import {
 import Home from "./pages/home/Home";
 import EventPage from "./pages/eventPage/EventPage";
 import Contact from "./pages/contact/Contact";
+import Team from "./pages/team/Team";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<EventPage />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/team" element={<Team />} />
       </Switch>
     </Router>
   );
