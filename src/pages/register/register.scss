@@ -1,0 +1,51 @@
+.register{
+    margin-top: 32px;
+    .events-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    button.final{
+        margin-top: 30px;
+        align-self: center;
+        width: fit-content;
+        padding: 15px 30px;
+        font-size: 22px;
+        color: white;
+        font-weight: 600;
+        background: #BA28FF;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all .5s ease;
+        white-space: nowrap;
+        &:hover{
+            border-color: white;
+        }
+    }
+}
+.cart-value{
+    text-align: center;
+    background-color: #BA28FF;
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 24px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all .5s ease;
+    border: solid 4px #dc97ff;
+    &.hovered{
+        width: fit-content;
+        border-radius: 10px;
+        border-color: white;
+        padding: 10px 20px;
+    }
+}

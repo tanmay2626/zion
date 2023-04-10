@@ -53,7 +53,7 @@ function Home() {
               }
             />
           </div>
-          <div>
+          <div id="astronaut-animation">
             <img src="./images/astronaut.gif" alt="" srcset="" />
           </div>
           <div>
