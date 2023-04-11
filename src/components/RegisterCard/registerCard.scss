@@ -92,6 +92,26 @@
     right: 10px;
     display: none;
   }
+  .MuiOutlinedInput-notchedOutline {
+    border-width: 1px !important;
+    border-color: rgb(231, 159, 171) !important;
+  }
+  
+  .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: rgb(212, 212, 212) !important;
+  }
+
+  .MuiFormLabel-root{
+    color: white;
+  }
+  .MuiSvgIcon-root{
+    color: white;
+  }
+
+  #demo-simple-select{
+    color: white;
+    font-weight: 600;
+  }
 }
 @media screen and (max-width: 730px) {
   .register-card{
