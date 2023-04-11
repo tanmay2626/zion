@@ -63,7 +63,7 @@
     .time{
         position: absolute;
         left: 50%;
-        bottom: 45%;
+        bottom: 46%;
         transform: translateX(-50%);
         font-size: 26px;
         opacity: 0.8;
@@ -71,22 +71,31 @@
     .explore-events{
         position: absolute;
         left: 50%;
-        bottom: 30%;
+        bottom: 24%;
         transform: translateX(-50%);
         display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 15px 30px;
-        font-size: 22px;
-        color: white;
-        font-weight: 600;
-        background: #BA28FF;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: all .5s ease;
-        white-space: nowrap;
-        &:hover{
-            border-color: white;
+        flex-wrap: wrap;
+        gap: 20px;
+        a{
+            text-decoration: none;
+        }
+        button{
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 30px;
+            font-size: 22px;
+            color: white;
+            font-weight: 600;
+            background: #BA28FF;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all .5s ease;
+            white-space: nowrap;
+            &:hover{
+                border-color: white;
+            }
         }
     }
     .over-image{
