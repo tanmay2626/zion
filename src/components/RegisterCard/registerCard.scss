@@ -1,0 +1,104 @@
+.register-card {
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(1px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  overflow: hidden;
+  width: 100%;
+  height: 100px;
+  transition: all .5s ease;
+  img {
+    height: 100%;
+    cursor: pointer;
+  }
+  .right {
+    width: 100%;
+    padding: 20px;
+    cursor: pointer;
+    // display:;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left{
+        > div {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            span {
+              color: var(--tertiary-color);
+              font-weight: 600;
+            }
+          }
+    }
+    h3 {
+      margin-top: 0px;
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: var(--tertiary-color);
+      // margin-bottom: 30px;
+    }
+    @media screen and (max-width: 730px) {
+      h3{
+          font-size: 20px;
+      }
+    }
+  }
+  .event-details {
+    display: none;
+    > div {
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      span {
+        color: var(--tertiary-color);
+        font-weight: 600;
+      }
+    }
+  }
+  &.opened{
+    flex-direction: column;
+    height: fit-content;
+    position: fixed;
+    // top: 20px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    margin-left: 0px;
+    background-color: rgba(56, 53, 53, 0.637);
+    width: min(500px, 90vw);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    .event-details{
+        display: block;
+        padding: 10px;
+        font-size: large;
+    }
+    img{
+        width: min(500px, 100%);
+        margin-bottom: 16px;
+    }
+    img.x{
+        display: block;
+      }
+  }
+  img.x{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+    display: none;
+  }
+}
+@media screen and (max-width: 730px) {
+  .register-card{
+      width: 90vw;
+      margin-left: calc(10vw / 2 * -1);
+      .right{
+        padding: 8px;
+      }
+  }
+}

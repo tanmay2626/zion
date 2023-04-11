@@ -10,7 +10,7 @@ function Navbar({ active }) {
   };
   const navigate = useNavigate();
   function navigateToHome(){
-    navigate('/');
+    navigate('/#');
   }
   return (
     <>
