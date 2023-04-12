@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   Routes as Switch,
-  Navigate
+  Navigate,
 } from "react-router-dom";
 import Home from "./pages/home/Home";
 import EventPage from "./pages/eventPage/EventPage";
