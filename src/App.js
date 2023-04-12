@@ -11,6 +11,7 @@ import Contact from "./pages/contact/Contact";
 import Team from "./pages/team/Team";
 import Register from "./pages/register/Register";
 import EnterDetails from "./pages/enterDetails/EnterDetails";
+import Payment from "./pages/payment/Payment";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/register" element={<Register />} />
         <Route path="/details" element={<EnterDetails />} />
+        <Route path="/payment" element={<Payment />} />
       </Switch>
     </Router>
   );
