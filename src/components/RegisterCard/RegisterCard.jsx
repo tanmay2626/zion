@@ -33,14 +33,14 @@ function RegisterCard({
     });
     if (checked) {
       setCart((prev) => {
-        return prev + members*parseInt(price);
+        return prev + members * parseInt(price);
       });
       setEventsSelected((prev) => {
         return [...prev, { eventid: value, members: members }];
       });
     } else {
       setCart((prev) => {
-        return prev - members*parseInt(price);
+        return prev - members * parseInt(price);
       });
       setEventsSelected((prev) => {
         return prev.filter((a) => a.eventid !== value);
@@ -50,15 +50,17 @@ function RegisterCard({
   function setTeamMembers(e) {
     setMembers(e.target.value);
     setEventsSelected((prev) => {
-      for(let i=0; i<prev.length; i++){
-        if(prev[i].eventid == eventid){
+      for (let i = 0; i < prev.length; i++) {
+        if (prev[i].eventid == eventid) {
           prev[i].members = e.target.value;
         }
       }
       return prev;
     });
     setCart((prev) => {
-      return prev - members*parseInt(price) + e.target.value * parseInt(price);
+      return (
+        prev - members * parseInt(price) + e.target.value * parseInt(price)
+      );
     });
   }
 
@@ -74,7 +76,7 @@ function RegisterCard({
           </div>
         </div>
         {selected ? (
-          <FormControl sx={{width: "100px"}}>
+          <FormControl sx={{ width: "100px" }}>
             <InputLabel id="demo-simple-select-label">Team Size</InputLabel>
             <Select
               labelId="demo-simple-select-label"
@@ -82,20 +84,22 @@ function RegisterCard({
               value={members}
               label="Team Size"
               onChange={setTeamMembers}
-              
             >
               <MenuItem value={1}>1</MenuItem>
               <MenuItem value={2}>2</MenuItem>
               <MenuItem value={3}>3</MenuItem>
+              <MenuItem value={4}>4</MenuItem>
             </Select>
           </FormControl>
         ) : null}
-        <input
-          type="checkbox"
-          name="event-name"
-          value={eventid}
-          onChange={handleChange}
-        />
+        {opened ? null : (
+          <input
+            type="checkbox"
+            name="event-name"
+            value={eventid}
+            onChange={handleChange}
+          />
+        )}
       </div>
       <div className="event-details">
         <div className="top">

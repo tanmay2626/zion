@@ -9,13 +9,17 @@ function Register() {
   const [cartValue, setCart] = useState(0);
   const [hovered, setHovered] = useState(false);
   const [eventsSelected, setEventsSelected] = useState([]);
-  const [qrOpened, setQrOpened] = useState(false);
+  // const [qrOpened, setQrOpened] = useState(false);
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(eventsSelected);
-    setQrOpened((prev) => {
-      return !prev;
-    });
+    if(cartValue){
+      localStorage.setItem('eventsSelected', JSON.stringify(eventsSelected));
+      localStorage.setItem('cartValue', cartValue);
+      window.location.href = '/payment';
+    } else {
+      alert("No events selected");
+    }
   };
   return (
     <>
@@ -48,15 +52,6 @@ function Register() {
         </form>
       </section>
       <Footer />
-      <section id="qr-code-popup" className={qrOpened ? "opened" : null}>
-        <div className="qr-container">
-          <h2>Scan below code to pay</h2>
-          <img src={"./images/" + cartValue + ".jpeg"} alt="qr-code" />
-          {/* <h4>₹{cartValue}</h4> */}
-          <input type="file" id="myFile" name="filename" />
-          <input type="submit" className="ss-submit" />
-        </div>
-      </section>
       <div
         className={hovered ? "cart-value hovered" : "cart-value"}
         onMouseEnter={() => {
@@ -65,9 +60,9 @@ function Register() {
         onMouseLeave={() => {
           setHovered(false);
         }}
-        onClick={submitHandler}
+        // onClick={submitHandler}
       >
-        {hovered ? "Proceed to pay >>" : "₹" + cartValue}
+        {cartValue}
       </div>
     </>
   );
