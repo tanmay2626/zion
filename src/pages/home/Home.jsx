@@ -16,7 +16,14 @@ function Home() {
         <h2>Utopia</h2>
         <img src="./images/Vector1.png" className="over-image" />
         <h3 className="time">
-          <span style={{ color: "#E5C3F1", opacity: 1, fontWeight: 900, fontSize:"40px" }}>
+          <span
+            style={{
+              color: "#E5C3F1",
+              opacity: 1,
+              fontWeight: 900,
+              fontSize: "40px",
+            }}
+          >
             {daydiff}
           </span>{" "}
           Days to go
@@ -42,40 +49,40 @@ function Home() {
             <AboutCard
               title={"/Zion"}
               desc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
+                'Zion is an annual technical festival organized by Dr. D.Y. Patil Institute of Technology, Pimpri, Pune, that aims to provide a platform for students to showcase their technical skills and creativity.'
               }
             />
             <AboutCard
               title={"Events"}
               desc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
+                "Zion hosts a diverse range of events including technical competitions, workshops, cultural programs, tech events, and more."
               }
             />
             <AboutCard
               title={"Seminars"}
               desc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
+                "Zion hosts a range of informative seminars by industry experts that cover the latest trends, challenges, and opportunities in various domains."
               }
             />
           </div>
           <div id="astronaut-animation">
-            <img src="./images/astronaut.gif" alt="" srcset="" />
+            <img src="./images/astronaut.png" alt="" srcset="" />
           </div>
           <div>
             <AboutCard
               title={"/Utopia"}
               desc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
+                "The theme of Utopia for Zion suggests a vision for a perfect and ideal society that is free from flaws and imperfections. The festival aims to inspire participants to think outside the box and ideate towards building a better future."
               }
             />
             <AboutCard
               title={"Hackathons"}
-              desc={"Lorem ipsum dolor sit amet, quis nostrud exercitation."}
+              desc={"Hackathons that provide a platform for students to collaborate, innovate and build exciting projects within a limited time frame."}
             />
             <AboutCard
               title={"Tech Talk"}
               desc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
+                "Tech talks in Zion feature industry experts and thought leaders sharing their insights and experiences on the latest trends and developments in the field of technology."
               }
             />
           </div>

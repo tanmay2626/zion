@@ -3,6 +3,7 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import RegisterCard from "../../components/RegisterCard/RegisterCard";
 import "./register.scss";
+import eventDetails from "../../data/eventDetails.json";
 
 function Register() {
   const [cartValue, setCart] = useState(0);
@@ -22,126 +23,25 @@ function Register() {
       <section className="register">
         <h2>Register</h2>
         <form className="events-container">
-          <RegisterCard
-            eventid="0"
-            src="./images/icon.jpeg"
-            title="Event Name"
-            date="16 April 2023"
-            time="1:30pm onwards"
-            location="8th Floor 802"
-            prizePool="15k & goodies"
-            maxMembers="1"
-            price="100"
-            cartValue={cartValue}
-            setCart={setCart}
-            setEventsSelected={setEventsSelected}
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation. agna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
-          />
-          <RegisterCard
-            eventid="1"
-            src="./images/icon.jpeg"
-            title="Event Name"
-            date="16 April 2023"
-            time="1:30pm onwards"
-            location="8th Floor 802"
-            prizePool="15k & goodies"
-            maxMembers="1"
-            price="200"
-            cartValue={cartValue}
-            setCart={setCart}
-            setEventsSelected={setEventsSelected}
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation. agna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
-          />
-          <RegisterCard
-            eventid="2"
-            src="./images/icon.jpeg"
-            title="Event Name"
-            date="16 April 2023"
-            time="1:30pm onwards"
-            location="8th Floor 802"
-            prizePool="15k & goodies"
-            maxMembers="1"
-            price="50"
-            cartValue={cartValue}
-            setCart={setCart}
-            setEventsSelected={setEventsSelected}
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation. agna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
-          />
-          <RegisterCard
-            eventid="3"
-            src="./images/icon.jpeg"
-            title="Event Name"
-            date="16 April 2023"
-            time="1:30pm onwards"
-            location="8th Floor 802"
-            prizePool="15k & goodies"
-            maxMembers="1"
-            price="200"
-            cartValue={cartValue}
-            setCart={setCart}
-            setEventsSelected={setEventsSelected}
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation. agna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
-          />
-          <RegisterCard
-            eventid="4"
-            src="./images/icon.jpeg"
-            title="Event Name"
-            date="16 April 2023"
-            time="1:30pm onwards"
-            location="8th Floor 802"
-            prizePool="15k & goodies"
-            maxMembers="1"
-            price="200"
-            cartValue={cartValue}
-            setCart={setCart}
-            setEventsSelected={setEventsSelected}
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation. agna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
-          />
-          <RegisterCard
-            eventid="5"
-            src="./images/icon.jpeg"
-            title="Event Name"
-            date="16 April 2023"
-            time="1:30pm onwards"
-            location="8th Floor 802"
-            prizePool="15k & goodies"
-            maxMembers="1"
-            price="200"
-            cartValue={cartValue}
-            setCart={setCart}
-            setEventsSelected={setEventsSelected}
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation. agna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
-          />
-          <RegisterCard
-            eventid="6"
-            src="./images/icon.jpeg"
-            title="Event Name"
-            date="16 April 2023"
-            time="1:30pm onwards"
-            location="8th Floor 802"
-            prizePool="15k & goodies"
-            maxMembers="1"
-            price="200"
-            cartValue={cartValue}
-            setCart={setCart}
-            setEventsSelected={setEventsSelected}
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation. agna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
-          />
-          <RegisterCard
-            eventid="7"
-            src="./images/icon.jpeg"
-            title="Event Name"
-            date="16 April 2023"
-            time="1:30pm onwards"
-            location="8th Floor 802"
-            prizePool="15k & goodies"
-            maxMembers="1"
-            price="50"
-            cartValue={cartValue}
-            setCart={setCart}
-            setEventsSelected={setEventsSelected}
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation. agna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
-          />
+          {eventDetails.eventDetails.map((event, index) => (
+            <RegisterCard
+              key={event.eventid}
+              eventid={event.eventid}
+              src={event.src}
+              title={event.title}
+              date={event.date}
+              time={event.time}
+              location={event.location}
+              prizePool={event.prizePool}
+              maxMembers={event.maxMembers}
+              desc={event.desc}
+              price={event.price}
+              cartValue={cartValue}
+              setCart={setCart}
+              setEventsSelected={setEventsSelected}
+              // add any additional props needed here
+            />
+          ))}
           <button class="final" type="button" onClick={submitHandler}>
             Let's Participate {">>"}
           </button>

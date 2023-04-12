@@ -34,7 +34,7 @@
         font-weight: 600;
         background-color: rgb(255, 242, 254);
         transition: all .5s ease;
-        color: rgb(255, 155, 230);
+        color: rgb(255, 122, 222);
         width: fit-content;
         &:hover{
             color: rgb(255, 255, 255);
@@ -104,6 +104,9 @@
             transform: translateX(0%);
         }
     }
+    .mobile{
+        display: none;
+    }
     .hamburger-icon{
         display: none;
     }
@@ -112,6 +115,7 @@
             font-size: 30px;
         }
         .mobile{
+            display: block;
             margin: 0px;
         }
         .hamburger-icon{
