@@ -10,21 +10,31 @@ function EnterDetails() {
       <section id="details">
         <h2>Register</h2>
         <div className="details-container">
-          <TextField id="outlined-basic" label="Name" variant="outlined" />
+          <TextField
+            id="outlined-basic"
+            label="Name"
+            variant="outlined"
+            fullWidth
+            // value={userDetails.name}
+          />
           <TextField
             id="outlined-basic"
             label="E-mail"
             variant="outlined"
             type="email"
+            fullWidth
+            // value={userDetails.email}
           />
           <TextField
             id="outlined-basic"
             label="Mobile Number"
             variant="outlined"
             type="number"
+            fullWidth
+            // value={userDetails.number}
           />
           <a href="/register">
-            <button>Participate Now</button>
+            <button className="participate">Participate Now</button>
           </a>
         </div>
       </section>

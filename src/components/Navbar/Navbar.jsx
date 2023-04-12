@@ -18,11 +18,16 @@ function Navbar({ active }) {
         <div className="left">
             <img src="images/ZION.png" alt="zion-logo" onClick={navigateToHome}/>
         </div>
+        <Link to={"/details"} className={"register mobile"}>
+          Register
+        </Link>
         <div className="right">
+          <Link to={"/details"} className={active == "register" ? "active register" : "register"}>
+            Register
+          </Link>
           <Link to={"/events"} className={active == "events" ? "active" : null}>
             Events
           </Link>
-          <a href="#about">About</a>
           <Link
             to={"/contact"}
             className={active == "contact" ? "active" : null}
@@ -52,7 +57,6 @@ function Navbar({ active }) {
           <Link to={"/events"} className={active == "events" ? "active" : null}>
             Events
           </Link>
-          <a href="#about">About</a>
           <Link
             to={"/contact"}
             className={active == "contact" ? "active" : null}

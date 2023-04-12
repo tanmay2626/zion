@@ -27,6 +27,20 @@
             height: 80px;
         }
     }
+    .register{
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid pink;
+        font-weight: 600;
+        background-color: rgb(255, 242, 254);
+        transition: all .5s ease;
+        color: rgb(255, 155, 230);
+        width: fit-content;
+        &:hover{
+            color: rgb(255, 255, 255);
+            background-color: rgb(255, 151, 255);
+        }
+    }
     a{
         font-size: 22px;
         margin-left: 50px;
@@ -96,6 +110,9 @@
     @media screen and (max-width:1240px) {
         .left{
             font-size: 30px;
+        }
+        .mobile{
+            margin: 0px;
         }
         .hamburger-icon{
             display: flex;

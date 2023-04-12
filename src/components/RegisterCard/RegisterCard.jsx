@@ -1,3 +1,4 @@
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { useState } from "react";
 import "./registerCard.scss";
 
@@ -13,8 +14,13 @@ function RegisterCard({
   desc,
   cartValue,
   setCart,
+  setEventsSelected,
+  eventsSelected,
+  eventid,
 }) {
   const [opened, setOpened] = useState(false);
+  const [members, setMembers] = useState(1);
+  const [selected, setSelected] = useState(false);
   function handleDetailOpener() {
     setOpened((prev) => {
       return !prev;
@@ -22,30 +28,71 @@ function RegisterCard({
   }
   function handleChange(e) {
     const { value, checked } = e.target;
+    setSelected((prev) => {
+      return !prev;
+    });
     if (checked) {
       setCart((prev) => {
-        return prev + parseInt(price);
+        return prev + members*parseInt(price);
+      });
+      setEventsSelected((prev) => {
+        return [...prev, { eventid: value, members: members }];
       });
     } else {
       setCart((prev) => {
-        return prev - parseInt(price);
+        return prev - members*parseInt(price);
+      });
+      setEventsSelected((prev) => {
+        return prev.filter((a) => a.eventid !== value);
       });
     }
   }
+  function setTeamMembers(e) {
+    setMembers(e.target.value);
+    setEventsSelected((prev) => {
+      for(let i=0; i<prev.length; i++){
+        if(prev[i].eventid == eventid){
+          prev[i].members = e.target.value;
+        }
+      }
+      return prev;
+    });
+    setCart((prev) => {
+      return prev - members*parseInt(price) + e.target.value * parseInt(price);
+    });
+  }
+
   return (
     <div className={opened ? "register-card opened" : "register-card"}>
-      <img src={src} onClick={handleDetailOpener} />
+      {selected ? null : <img src={src} onClick={handleDetailOpener} />}
       <div className="right">
         <div className="left" onClick={handleDetailOpener}>
           <h3>{title}</h3>
           <div className="price">
-            <span>Entry fee : </span>₹{price}/-
+            <span>Entry fee : </span>₹{price}/Person
           </div>
         </div>
+        {selected ? (
+          <FormControl sx={{width: "100px"}}>
+            <InputLabel id="demo-simple-select-label">Team Size</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={members}
+              label="Team Size"
+              onChange={setTeamMembers}
+              
+            >
+              <MenuItem value={1}>1</MenuItem>
+              <MenuItem value={2}>2</MenuItem>
+              <MenuItem value={3}>3</MenuItem>
+            </Select>
+          </FormControl>
+        ) : null}
         <input
           type="checkbox"
           name="event-name"
-          value={title}
+          value={eventid}
           onChange={handleChange}
         />
       </div>
@@ -72,7 +119,7 @@ function RegisterCard({
         </div>
         <p className="desc">{desc}</p>
       </div>
-      <img src="images/x.png" className="x" onClick={handleDetailOpener}/>
+      <img src="images/x.png" className="x" onClick={handleDetailOpener} />
     </div>
   );
 }

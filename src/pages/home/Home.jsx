@@ -4,7 +4,7 @@ import Events from "../events/Events";
 import "./home.scss";
 
 function Home() {
-  const d2 = new Date("04/14/2023");
+  const d2 = new Date("04/19/2023");
   const d1 = new Date();
   var diff = d2.getTime() - d1.getTime();
   var daydiff = Math.ceil(diff / (1000 * 60 * 60 * 24));
@@ -16,7 +16,7 @@ function Home() {
         <h2>Utopia</h2>
         <img src="./images/Vector1.png" className="over-image" />
         <h3 className="time">
-          <span style={{ color: "#E5C3F1", opacity: 1, fontWeight: 600 }}>
+          <span style={{ color: "#E5C3F1", opacity: 1, fontWeight: 900, fontSize:"40px" }}>
             {daydiff}
           </span>{" "}
           Days to go
