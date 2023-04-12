@@ -54,7 +54,7 @@ export default function Payment() {
         dataToSheet
       )
       .then((res) => {
-        navigate("/completed");
+        navigate("/success");
       })
       .catch((err) => {
         console.log(err);
@@ -74,8 +74,9 @@ export default function Payment() {
             <Input onChange={handleFileChange} type="file" accept="image/*" />
           </Button>
           <TextField
+          className="transaction-id"
             id="outlined-basic"
-            label="Transaction"
+            label="Transaction ID"
             variant="outlined"
             name="transaction"
             onChange={handleChange}

@@ -12,7 +12,7 @@ import Team from "./pages/team/Team";
 import Register from "./pages/register/Register";
 import EnterDetails from "./pages/enterDetails/EnterDetails";
 import Payment from "./pages/payment/Payment";
-import Completed from "./pages/completed/Completed";
+import Success from "./pages/success/Success";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/details" element={<EnterDetails />} />
         <Route path="/payment" element={<Payment />} />
-        <Route path="/completed" element={<Completed />} />
+        <Route path="/success" element={<Success />} />
       </Switch>
     </Router>
   );
