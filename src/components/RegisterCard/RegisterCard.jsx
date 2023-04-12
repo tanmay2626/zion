@@ -65,6 +65,7 @@ function RegisterCard({
   return (
     <div className={opened ? "register-card opened" : "register-card"}>
       {selected ? null : <img src={src} onClick={handleDetailOpener} />}
+      {/* {opened ? <img src={src} onClick={handleDetailOpener} />  : null} */}
       <div className="right">
         <div className="left" onClick={handleDetailOpener}>
           <h3>{title}</h3>

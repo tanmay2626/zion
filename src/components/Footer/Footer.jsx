@@ -8,22 +8,24 @@ function Footer() {
         <div className="left-container">
           <h2>Zion 2023</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation.
+            Zion is a highly anticipated annual event that attracts participants
+            from various colleges and universities across India to showcase
+            their technical skills and innovative ideas. The festival provides a
+            platform for students to learn, grow, and network with like-minded
+            individuals in a competitive yet fun environment.
           </p>
         </div>
         <div className="right-container">
           <div className="left">
             <h3>Quick Links</h3>
             <a href="/">Home</a>
-            <a href="/">Event</a>
-            <a href="/">Team</a>
-            <a href="/">Contact</a>
+            <a href="/events">Event</a>
+            <a href="/team">Team</a>
+            <a href="/contact">Contact</a>
           </div>
           <div className="right">
             <h3>Socials</h3>
-            <a href="/">Instagram</a>
+            <a href="https://www.instagram.com/zion.dit/?hl=en">Instagram</a>
             <a href="/">LinkedIn</a>
             <a href="/">Twitter</a>
             <a href="/">Whatsapp</a>
