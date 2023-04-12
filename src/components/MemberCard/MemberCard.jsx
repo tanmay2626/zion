@@ -1,17 +1,17 @@
 import "./memberCard.scss";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
-function MemberCard() {
+function MemberCard({src, name}) {
   return (
     <div class="card">
       <div id="top-left" class="corner"></div>
       <div id="bottom-right" class="corner"></div>
       <div class="card-wrap">
         <div class="card-img">
-          <img src="./images/team2.png" alt="profile" />
+          <img src={src} alt={name} />
         </div>
         <div class="card-footer">
-          <div>Kartikey Singh</div>
+          <div>{name}</div>
           <div>
             <FaLinkedin /> <FaInstagram />
           </div>
