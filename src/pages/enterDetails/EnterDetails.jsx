@@ -1,13 +1,39 @@
-import { Hidden, TextField } from "@mui/material";
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+} from "@mui/material";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import "./enterDetails.scss";
+import GoogleAuth from "../../components/GoogleAuth/GoogleAuth";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function EnterDetails(props) {
-  const HandleInput = (e) => {
+  const navigate = useNavigate();
+  const [error, setError] = useState(null);
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [college, setCollege] = useState("");
+  const [details, setDetails] = useState({
+    name: "",
+    number: 0,
+  });
+  const handleUsername = (event) => {
+    setUsername(event.target.value);
+  };
+
+  const handleCollege = (event) => {
+    setCollege(event.target.value);
+  };
+
+  const handleChange = (e) => {
     const { value, name } = e.target;
 
-    props.setDetails((prev) => {
+    setDetails((prev) => {
       return {
         ...prev,
         [name]: value,
@@ -15,34 +41,75 @@ function EnterDetails(props) {
     });
   };
 
+  const handleSubmit = () => {
+    const data = {
+      email: email,
+      college: college,
+      useranme: username,
+      mobile: details.number,
+      name: details.name,
+    };
+    localStorage.setItem("details", JSON.stringify(data));
+    navigate("/register");
+  };
   return (
     <>
       <Navbar active={"register"} />
       <section id="details">
         <h2>Register</h2>
         <div className="details-container">
+          <GoogleAuth setEmail={setEmail} />
           <TextField
             id="outlined-basic"
             label="Name"
             variant="outlined"
             fullWidth
-            onChange={HandleInput}
             name="name"
+            onChange={handleChange}
+            required
             // value={userDetails.name}
+          />
+          <TextField
+            id="outlined-basic"
+            label="ActualOne Username"
+            variant="outlined"
+            type="text"
+            name="username"
+            fullWidth
+            onChange={handleUsername}
+            required
+            // value={userDetails.email}
           />
           <TextField
             id="outlined-basic"
             label="Mobile Number"
             variant="outlined"
-            type="number"
+            name="number"
             fullWidth
-            onChange={HandleInput}
-            name="mobile"
+            onChange={handleChange}
+            required
             // value={userDetails.number}
           />
-          <a href="/register">
-            <button className="participate">Participate Now</button>
-          </a>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">College</InputLabel>
+            <Select
+              sx={{ width: 100 + "%" }}
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              label="College"
+              value={college}
+              onChange={handleCollege}
+            >
+              <MenuItem
+                value={"Dr. D. Y. Patil Institute of Technology, Pimpri"}
+              >
+                Dr. D. Y. Patil Institute of Technology, Pimpri
+              </MenuItem>
+            </Select>
+          </FormControl>
+          <button onClick={handleSubmit} className="participate">
+            Participate Now
+          </button>
         </div>
       </section>
       <Footer />
