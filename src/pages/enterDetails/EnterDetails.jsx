@@ -3,7 +3,18 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import "./enterDetails.scss";
 
-function EnterDetails() {
+function EnterDetails(props) {
+  const HandleInput = (e) => {
+    const { value, name } = e.target;
+
+    props.setDetails((prev) => {
+      return {
+        ...prev,
+        [name]: value,
+      };
+    });
+  };
+
   return (
     <>
       <Navbar active={"register"} />
@@ -15,15 +26,9 @@ function EnterDetails() {
             label="Name"
             variant="outlined"
             fullWidth
+            onChange={HandleInput}
+            name="name"
             // value={userDetails.name}
-          />
-          <TextField
-            id="outlined-basic"
-            label="E-mail"
-            variant="outlined"
-            type="email"
-            fullWidth
-            // value={userDetails.email}
           />
           <TextField
             id="outlined-basic"
@@ -31,6 +36,8 @@ function EnterDetails() {
             variant="outlined"
             type="number"
             fullWidth
+            onChange={HandleInput}
+            name="mobile"
             // value={userDetails.number}
           />
           <a href="/register">

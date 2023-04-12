@@ -3,19 +3,38 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import RegisterCard from "../../components/RegisterCard/RegisterCard";
 import "./register.scss";
+import GoogleAuth from "../../components/GoogleAuth/GoogleAuth";
+import InputLabel from "@mui/material/InputLabel";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import { TextField } from "@mui/material";
 
-function Register() {
+function Register(props) {
   const [cartValue, setCart] = useState(0);
   const [hovered, setHovered] = useState(false);
   const [eventsSelected, setEventsSelected] = useState([]);
   const [qrOpened, setQrOpened] = useState(false);
+  const [email, setEmail] = useState(null);
+  const [username, setUsername] = useState(null);
+
+  const [college, setCollege] = useState("");
+
+  const handleChange = (event) => {
+    setCollege(event.target.value);
+  };
+
+  const HandleInput = (event) => {
+    setUsername(event.target);
+  };
+
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(eventsSelected);
-    setQrOpened((prev)=>{
+    setQrOpened((prev) => {
       return !prev;
-    })
+    });
   };
+
   return (
     <>
       <Navbar active={"register"} />
@@ -148,14 +167,42 @@ function Register() {
         </form>
       </section>
       <Footer />
+
       <section id="qr-code-popup" className={qrOpened ? "opened" : null}>
-        <div className="qr-container">
-          <h2>Scan below code to pay</h2>
-          <img src={"./images/" + cartValue + ".jpeg"} alt="qr-code" />
-          {/* <h4>₹{cartValue}</h4> */}
-          <input type="file" id="myFile" name="filename" />
-          <input type="submit" className="ss-submit" />
-        </div>
+        <form>
+          <div className="qr-container">
+            <div className="details-container">
+              <GoogleAuth email={email} setEmail={setEmail} />
+              <div className="select-college">
+                <InputLabel id="demo-simple-select-label">College</InputLabel>
+                <Select
+                  sx={{ width: 100 + "%" }}
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={college}
+                  label="College"
+                  onChange={handleChange}
+                >
+                  <MenuItem
+                    value={"Dr. D. Y. Patil Institute of Technology, Pimpri"}
+                  >
+                    Dr. D. Y. Patil Institute of Technology, Pimpri
+                  </MenuItem>
+                </Select>
+                <InputLabel id="demo-simple-select-label">Username</InputLabel>
+                <TextField
+                  id="outlined-basic"
+                  label="Name"
+                  variant="outlined"
+                  fullWidth
+                  onChange={HandleInput}
+                  name="name"
+                  // value={userDetails.name}
+                />
+              </div>
+            </div>
+          </div>
+        </form>
       </section>
       <div
         className={hovered ? "cart-value hovered" : "cart-value"}
