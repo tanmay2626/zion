@@ -4,11 +4,13 @@ import Navbar from "../../components/Navbar/Navbar";
 import "./payment.scss";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function Payment() {
   const cartValue = localStorage.getItem("cartValue");
   const [file, setFile] = useState(null);
   const [transaction, setTransaction] = useState("");
+  const navigate = useNavigate();
 
   const handleFileChange = (event) => {
     const currFile = event.target.files[0];
@@ -52,7 +54,7 @@ export default function Payment() {
         dataToSheet
       )
       .then((res) => {
-        console.log(res.data);
+        navigate("/completed");
       })
       .catch((err) => {
         console.log(err);
