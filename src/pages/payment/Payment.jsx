@@ -4,14 +4,6 @@ import Navbar from "../../components/Navbar/Navbar";
 import "./payment.scss";
 import { useState } from "react";
 import axios from "axios";
-import { CloudinaryContext, Image } from "cloudinary-react";
-import { Cloudinary } from "cloudinary-core";
-
-// const cloudinaryCore = new Cloudinary({
-//   cloud_name: "dldntxfqv",
-//   api_key: "717397115915819",
-//   api_secret: "XqLJWCGmFiWIVZCYsYP-ddZjB3cT",
-// });
 
 export default function Payment() {
   const cartValue = localStorage.getItem("cartValue");
@@ -19,7 +11,18 @@ export default function Payment() {
   const [transaction, setTransaction] = useState("");
 
   const handleFileChange = (event) => {
-    setFile(event.target.files[0]);
+    const currFile = event.target.files[0];
+    const formData = new FormData();
+    formData.append("file", currFile);
+    formData.append("upload_preset", "hhfnuhff");
+    axios
+      .post("https://api.cloudinary.com/v1_1/dldntxfqv/upload", formData)
+      .then((res) => {
+        setFile(res.data.secure_url);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const handleChange = (event) => {
@@ -34,37 +37,28 @@ export default function Payment() {
     const email = details.email;
     const college = details.college;
     const mobile = details.mobile;
-    const formData = new FormData();
-    formData.append("file", file);
-    formData.append("upload_preset", "hhfnuhff");
+
+    const dataToSheet = {
+      Name: name,
+      Email: email,
+      Mobile: mobile,
+      College: college,
+      TransactionId: transaction,
+      ImgUrl: file,
+    };
     axios
-      .post("https://api.cloudinary.com/v1_1/dldntxfqv/upload", formData)
+      .post(
+        "https://sheet.best/api/sheets/bd3072c0-9531-4149-990e-6fcf9b0ed2a8",
+        dataToSheet
+      )
       .then((res) => {
-        const dataToSheet = {
-          Name: name,
-          Email: email,
-          Mobile: mobile,
-          College: college,
-          TransactionId: transaction,
-          ImgUrl: res.data.secure_url,
-        };
-        axios
-          .post(
-            "https://sheet.best/api/sheets/bd3072c0-9531-4149-990e-6fcf9b0ed2a8",
-            dataToSheet
-          )
-          .then((res) => {
-            console.log(res.data);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
+        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
 
-    localStorage.removeItem("details");
+    //localStorage.removeItem("details");
   };
   return (
     <>
@@ -75,7 +69,7 @@ export default function Payment() {
           <img src={"./images/" + cartValue + ".jpeg"} alt="qr-code" />
           <h4>₹{cartValue}</h4>
           <Button>
-            <Input onClick={handleFileChange} type="file" accept="image/*" />
+            <Input onChange={handleFileChange} type="file" accept="image/*" />
           </Button>
           <TextField
             id="outlined-basic"
