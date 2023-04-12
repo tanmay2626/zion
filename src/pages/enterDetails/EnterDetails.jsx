@@ -58,7 +58,7 @@ function EnterDetails(props) {
       <section id="details">
         <h2>Register</h2>
         <div className="details-container">
-          <GoogleAuth setEmail={setEmail} />
+          <GoogleAuth setEmail={setEmail} setToken={setToken} />
           <TextField
             id="outlined-basic"
             label="Name"
@@ -71,7 +71,7 @@ function EnterDetails(props) {
           />
           <TextField
             id="outlined-basic"
-            label="ActualOne Username"
+            label="Create ActualOne Username"
             variant="outlined"
             type="text"
             name="username"
