@@ -17,10 +17,17 @@ function RegisterCard({
   setEventsSelected,
   eventsSelected,
   eventid,
+  minMembers,
+  groupOrPerson,
 }) {
   const [opened, setOpened] = useState(false);
-  const [members, setMembers] = useState(1);
+  const [members, setMembers] = useState(maxMembers);
   const [selected, setSelected] = useState(false);
+  maxMembers = parseInt(maxMembers);
+  const arr = new Array(maxMembers - minMembers +1);
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = parseInt(minMembers) + i;
+  }
   function handleDetailOpener() {
     setOpened((prev) => {
       return !prev;
@@ -33,14 +40,16 @@ function RegisterCard({
     });
     if (checked) {
       setCart((prev) => {
-        return prev + members * parseInt(price);
+        // return prev + members * parseInt(price);
+        return prev + parseInt(price);
       });
       setEventsSelected((prev) => {
         return [...prev, { eventid: value, members: members }];
       });
     } else {
       setCart((prev) => {
-        return prev - members * parseInt(price);
+        // return prev - members * parseInt(price);
+        return prev - parseInt(price);
       });
       setEventsSelected((prev) => {
         return prev.filter((a) => a.eventid !== value);
@@ -57,11 +66,11 @@ function RegisterCard({
       }
       return prev;
     });
-    setCart((prev) => {
-      return (
-        prev - members * parseInt(price) + e.target.value * parseInt(price)
-      );
-    });
+    // setCart((prev) => {
+    //   return (
+    //     prev - members * parseInt(price) + e.target.value * parseInt(price)
+    //   );
+    // });
   }
 
   return (
@@ -72,7 +81,7 @@ function RegisterCard({
         <div className="left" onClick={handleDetailOpener}>
           <h3>{title}</h3>
           <div className="price">
-            <span>Entry fee : </span>₹{price}/Person
+            <span>Entry fee : </span>₹{price}{groupOrPerson == "person" ? "/person" : "/group"}
           </div>
         </div>
         {selected ? (
@@ -85,10 +94,9 @@ function RegisterCard({
               label="Team Size"
               onChange={setTeamMembers}
             >
-              <MenuItem value={1}>1</MenuItem>
-              <MenuItem value={2}>2</MenuItem>
-              <MenuItem value={3}>3</MenuItem>
-              <MenuItem value={4}>4</MenuItem>
+              {arr.map((val, index) => (
+                <MenuItem value={val}>{val}</MenuItem>
+              ))}
             </Select>
           </FormControl>
         ) : null}
@@ -108,7 +116,7 @@ function RegisterCard({
             {date}
           </div>
           <div className="time">
-            <span>Time : </span>
+            <span>Duration : </span>
             {time}
           </div>
         </div>

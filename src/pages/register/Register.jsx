@@ -37,12 +37,14 @@ function Register() {
               time={event.time}
               location={event.location}
               prizePool={event.prizePool}
+              minMembers={event.minMembers}
               maxMembers={event.maxMembers}
               desc={event.desc}
               price={event.price}
               cartValue={cartValue}
               setCart={setCart}
               setEventsSelected={setEventsSelected}
+              groupOrPerson = {event.groupOrPerson}
               // add any additional props needed here
             />
           ))}
@@ -60,7 +62,7 @@ function Register() {
         onMouseLeave={() => {
           setHovered(false);
         }}
-        // onClick={submitHandler}
+        onClick={submitHandler}
       >
         {cartValue}
       </div>

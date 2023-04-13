@@ -68,7 +68,7 @@ export default function Payment() {
       <section id="payment" className="payment">
         <div className="qr-container">
           <h2>Scan below code to pay</h2>
-          <img src={"./images/" + cartValue + ".jpeg"} alt="qr-code" />
+          <img src={"./images/qr-code/" + cartValue + ".png"} alt="qr-code" />
           <h4>₹{cartValue}</h4>
           <Button>
             <Input onChange={handleFileChange} type="file" accept="image/*" />

@@ -22,7 +22,7 @@ function EventCard({
               {date}
             </div>
             <div className="time">
-              <span>Time : </span>
+              <span>Duration : </span>
               {time}
             </div>
           </div>
@@ -37,7 +37,7 @@ function EventCard({
             </div>
           </div>
           <p className="desc">{desc}</p>
-          {maxMembers > 1 ? <select name="participants"></select> : null}
+          {/* {maxMembers > 1 ? <select name="participants"></select> : null} */}
         </div>
       </div>
     </div>

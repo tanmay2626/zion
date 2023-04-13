@@ -18,6 +18,7 @@ function EnterDetails(props) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [college, setCollege] = useState("");
+  const [otherCollegeName, setOtherCollegeName] = useState("");
   const [details, setDetails] = useState({
     name: "",
     number: 0,
@@ -30,9 +31,12 @@ function EnterDetails(props) {
     setCollege(event.target.value);
   };
 
+  const handleChangeCollege = (e) =>{
+    setOtherCollegeName(e.target.value);
+  }
+
   const handleChange = (e) => {
     const { value, name } = e.target;
-
     setDetails((prev) => {
       return {
         ...prev,
@@ -44,7 +48,7 @@ function EnterDetails(props) {
   const handleSubmit = () => {
     const data = {
       email: email,
-      college: college,
+      college: (college == 'Other' ? otherCollegeName : college),
       useranme: username,
       mobile: details.number,
       name: details.name,
@@ -105,8 +109,22 @@ function EnterDetails(props) {
               >
                 Dr. D. Y. Patil Institute of Technology, Pimpri
               </MenuItem>
+              <MenuItem value={"Other"}>Other</MenuItem>
             </Select>
           </FormControl>
+          {college == "Other" ? (
+            <TextField
+              id="outlined-basic"
+              label="College Name"
+              variant="outlined"
+              name="College Name"
+              fullWidth
+              value={otherCollegeName}
+              onChange={handleChangeCollege}
+              required
+              // value={userDetails.number}
+            />
+          ) : null}
           <button onClick={handleSubmit} className="participate">
             Participate Now
           </button>
