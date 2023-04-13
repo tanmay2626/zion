@@ -26,6 +26,11 @@
         text-decoration: none;
         color: white;
     }
+    .mid{
+        h4{
+            margin-bottom: 10px;
+        }
+    }
     .right{
         h4{
             margin-bottom: -10px;
@@ -33,6 +38,11 @@
         p{
             margin-bottom: -10px;
         };
+    }
+    .left{
+        img{
+            height: 20px;
+        }
     }
   }
 }
