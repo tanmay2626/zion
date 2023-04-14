@@ -5,6 +5,7 @@ import "./payment.scss";
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 export default function Payment() {
   const cartValue = localStorage.getItem("cartValue");
@@ -36,6 +37,7 @@ export default function Payment() {
     const data = localStorage.getItem("details");
     const amount = localStorage.getItem("cartValue");
     const events = localStorage.getItem("eventsSelected");
+    const referenceid = uuidv4().substring(0, 10);
     const eventsArray = JSON.parse(events);
     const selectedEvents = eventsArray
       .map((event) => `${event.title}:${event.members}`)
@@ -52,6 +54,7 @@ export default function Payment() {
     formData.append("Email", email);
     formData.append("Mobile", mobile);
     formData.append("College", college);
+    formData.append("ReferenceId", referenceid);
     formData.append("Events", selectedEvents);
     formData.append("TransactionId", transaction);
     formData.append("Amount", amount);
@@ -59,10 +62,11 @@ export default function Payment() {
 
     axios
       .post(
-        "https://script.google.com/macros/s/AKfycbyNvWCMFjTBBLjZedXK8NtPLp5fR5OeFHcPPyOwcRT63bZ-iIKLl2ZrtUopTBYkrLkl/exec",
+        "https://script.google.com/macros/s/AKfycbzFzrHO7QWw4yTq5eYBeIPDKo4FfY3_MzKCVuQb-mg8BreKKJhmZG2Pzfe2XRkHoAVC/exec",
         formData
       )
       .then((res) => {
+        localStorage.setItem("id", referenceid);
         navigate("/success");
         console.log("Success");
       })
