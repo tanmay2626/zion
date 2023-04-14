@@ -4,7 +4,7 @@ import "./events.scss";
 import eventDetails from "../../data/eventDetails.json";
 
 function Events() {
-  console.log(eventDetails);
+  // console.log(eventDetails);
   return (
     <>
       <section id="events">

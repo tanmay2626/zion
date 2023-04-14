@@ -69,7 +69,7 @@ export default function Payment() {
       .then((res) => {
         localStorage.setItem("id", referenceid);
         navigate("/success");
-        console.log("Success");
+        // console.log("Success");
       })
       .catch((err) => {
         console.log(err);

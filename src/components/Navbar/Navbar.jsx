@@ -42,7 +42,7 @@ function Navbar({ active }) {
           className="hamburger-icon"
           onClick={() => {
             setIsCollapsed((prevValue) => {
-              console.log(prevValue);
+              // console.log(prevValue);
               return !prevValue;
             });
           }}

@@ -67,7 +67,7 @@ function Home() {
             />
           </div>
           <div id="astronaut-animation">
-            <img src="./images/astronaut.png" alt="" srcset="" />
+            <img src="./images/astronaut.png" alt="astronaut"/>
           </div>
           <div>
             <AboutCard

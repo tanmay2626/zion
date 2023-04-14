@@ -15,7 +15,7 @@ function Register() {
   // const [qrOpened, setQrOpened] = useState(false);
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(eventsSelected);
+    // console.log(eventsSelected);
     if (cartValue) {
       localStorage.setItem("eventsSelected", JSON.stringify(eventsSelected));
       localStorage.setItem("cartValue", cartValue);
@@ -58,7 +58,7 @@ function Register() {
               // add any additional props needed here
             />
           ))}
-          <button class="final" type="button" onClick={submitHandler}>
+          <button className="final" type="button" onClick={submitHandler}>
             Let's Participate {">>"}
           </button>
         </form>
