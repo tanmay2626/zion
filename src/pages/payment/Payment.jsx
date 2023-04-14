@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import "./payment.scss";
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Payment() {
   const cartValue = localStorage.getItem("cartValue");
@@ -70,11 +70,12 @@ export default function Payment() {
           <h2>Scan below code to pay</h2>
           <img src={"./images/qr-code/" + cartValue + ".png"} alt="qr-code" />
           <h4>₹{cartValue}</h4>
+          <p>Attach payment screenshot *</p>
           <Button>
             <Input onChange={handleFileChange} type="file" accept="image/*" />
           </Button>
           <TextField
-          className="transaction-id"
+            className="transaction-id"
             id="outlined-basic"
             label="Transaction ID"
             variant="outlined"
@@ -84,6 +85,9 @@ export default function Payment() {
             // value={userDetails.name}
           />
           <input type="submit" onClick={handleSubmit} className="ss-submit" />
+          <Link to="/register">
+            <p>Go Back</p>
+          </Link>
         </div>
       </section>
       <Footer />
