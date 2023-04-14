@@ -96,7 +96,7 @@
         "groupOrPerson" : "group",
         "minMembers" : "1",
         "maxMembers" : "4",
-        "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation. agna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
+        "desc" : "Offroad rumble is an exhilarating event where offroad vehicles race through rugged terrain, facing challenging obstacles and extreme terrain. This adrenaline-fueled competition tests drivers' skills, vehicles' capabilities, and endurance in a wild and unpredictable environment. From rocky hills and deep mud pits to steep slopes and water crossings, the offroad rumble event offers a thrilling experience for both participants and spectators alike."
     },
     {
         "eventid" : "7",
@@ -124,7 +124,7 @@
         "groupOrPerson" : "group",
         "minMembers" : "1",
         "maxMembers" : "4",
-        "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation. agna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
+        "desc" : "Buisness plan competition organised by department of MBA in Zion Techfest"
     },
     {
         "eventid" : "9",
@@ -208,7 +208,7 @@
         "groupOrPerson" : "person",
         "minMembers" : "1",
         "maxMembers" : "1",
-        "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation. agna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
+        "desc" : "Electromaze is a 3-round electrical event testing technical skills. Participants build circuits in round 1 and solve complex problems in round 2. The final round involves implementing an electrical system. It's an excellent opportunity for aspiring engineers to gain valuable experience."
     },
     {
         "eventid" : "15",
@@ -222,7 +222,7 @@
         "groupOrPerson" : "group",
         "minMembers" : "2",
         "maxMembers" : "3",
-        "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation. agna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
+        "desc" : "Electromaze is a 3-round electrical event testing technical skills. Participants build circuits in round 1 and solve complex problems in round 2. The final round involves implementing an electrical system. It's an excellent opportunity for aspiring engineers to gain valuable experience."
     },
     {
         "eventid" : "16",
@@ -250,7 +250,7 @@
         "groupOrPerson" : "group",
         "minMembers" : "2",
         "maxMembers" : "4",
-        "desc" : "MMystery Quest is an engaging quiz game that challenges participants in electrical and electronics. It includes three rounds: a multiple-choice online quiz, a crossword puzzle, and an \"escape room\" challenge. The game tests participants' knowledge, problem-solving skills, and creativity. Register now to put your skills to the test and enjoy an interactive experience!"
+        "desc" : "Mystery Quest is an engaging quiz game that challenges participants in electrical and electronics. It includes three rounds: a multiple-choice online quiz, a crossword puzzle, and an \"escape room\" challenge. The game tests participants' knowledge, problem-solving skills, and creativity. Register now to put your skills to the test and enjoy an interactive experience!"
     },
     {
         "eventid" : "18",
@@ -263,7 +263,7 @@
         "price" : "200",
         "minMembers" : "3",
         "maxMembers" : "5",
-        "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation. agna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
+        "desc" : "Techfued is an event for tech enthusiasts, showcasing latest advancements in AI, robotics, blockchain, and IoT. Participants engage in workshops, presentations, and networking with like-minded individuals and companies. Whether you're a startup, investor, or tech enthusiast, it promises to be an unforgettable experience."
     }
   ]
 }
