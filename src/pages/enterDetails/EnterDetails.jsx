@@ -21,7 +21,7 @@ function EnterDetails(props) {
   const [otherCollegeName, setOtherCollegeName] = useState("");
   const [details, setDetails] = useState({
     name: "",
-    number: 0,
+    mobile: 0,
   });
   const handleUsername = (event) => {
     setUsername(event.target.value);
@@ -50,7 +50,7 @@ function EnterDetails(props) {
       email: email,
       college: college == "Other" ? otherCollegeName : college,
       useranme: username,
-      mobile: details.number,
+      mobile: details.mobile,
       name: details.name,
     };
     localStorage.setItem("details", JSON.stringify(data));
@@ -67,12 +67,13 @@ function EnterDetails(props) {
         <div className="details-container">
           <GoogleAuth setEmail={setEmail} />
           {token && (
-            <div className="details-box">
+            <form onSubmit={handleSubmit} className="details-box">
               <TextField
                 id="outlined-basic"
                 label="Name"
                 variant="outlined"
                 fullWidth
+                value={details.name}
                 name="name"
                 onChange={handleChange}
                 required
@@ -84,6 +85,7 @@ function EnterDetails(props) {
                 variant="outlined"
                 type="text"
                 name="username"
+                value={username}
                 fullWidth
                 onChange={handleUsername}
                 required
@@ -93,10 +95,13 @@ function EnterDetails(props) {
                 id="outlined-basic"
                 label="Mobile Number"
                 variant="outlined"
-                name="number"
+                type="text"
+                name="mobile"
+                pattern="[6789][0-9]{9}"
+                title="Please enter valid phone number"
+                required
                 fullWidth
                 onChange={handleChange}
-                required
                 // value={userDetails.number}
               />
               <FormControl fullWidth>
@@ -130,10 +135,19 @@ function EnterDetails(props) {
                   // value={userDetails.number}
                 />
               ) : null}
-              <button onClick={handleSubmit} className="participate">
+              {(!details.name || !username || !college || !details.mobile) && (
+                <p>Please fill all required fields</p>
+              )}
+              <button
+                disabled={
+                  !details.name || !username || !college || !details.mobile
+                }
+                className="participate"
+                type="submit"
+              >
                 Participate Now
               </button>
-            </div>
+            </form>
           )}
         </div>
       </section>
