@@ -4,23 +4,33 @@ import Navbar from "../../components/Navbar/Navbar";
 import RegisterCard from "../../components/RegisterCard/RegisterCard";
 import "./register.scss";
 import eventDetails from "../../data/eventDetails.json";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function Register() {
   const [cartValue, setCart] = useState(0);
   const [hovered, setHovered] = useState(false);
   const [eventsSelected, setEventsSelected] = useState([]);
+  const navigate = useNavigate();
   // const [qrOpened, setQrOpened] = useState(false);
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(eventsSelected);
-    if(cartValue){
-      localStorage.setItem('eventsSelected', JSON.stringify(eventsSelected));
-      localStorage.setItem('cartValue', cartValue);
-      window.location.href = '/payment';
+    if (cartValue) {
+      localStorage.setItem("eventsSelected", JSON.stringify(eventsSelected));
+      localStorage.setItem("cartValue", cartValue);
+      window.location.href = "/payment";
     } else {
       alert("No events selected");
     }
   };
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/details");
+    }
+  }, [navigate]);
   return (
     <>
       <Navbar active={"register"} />
@@ -44,7 +54,7 @@ function Register() {
               cartValue={cartValue}
               setCart={setCart}
               setEventsSelected={setEventsSelected}
-              groupOrPerson = {event.groupOrPerson}
+              groupOrPerson={event.groupOrPerson}
               // add any additional props needed here
             />
           ))}

@@ -6,6 +6,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+import { useEffect } from "react";
 
 export default function Payment() {
   const cartValue = localStorage.getItem("cartValue");
@@ -74,6 +75,13 @@ export default function Payment() {
         console.log(err);
       });
   };
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/details");
+    }
+  }, [navigate]);
   return (
     <>
       <Navbar active={"register"} />

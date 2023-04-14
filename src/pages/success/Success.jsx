@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "./success.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Success() {
+  const navigate = useNavigate();
   localStorage.removeItem("token");
   localStorage.removeItem("details");
   localStorage.removeItem("eventsSelected");
@@ -15,6 +17,13 @@ export default function Success() {
     navigator.clipboard.writeText(referenceid);
     setCopySuccess(true);
   };
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/details");
+    }
+  }, [navigate]);
 
   return (
     <section id="success">
