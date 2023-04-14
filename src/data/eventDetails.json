@@ -30,7 +30,7 @@
     },
     {
         "eventid" : "2",
-        "src" : "./images/icon.jpeg",
+        "src" : "./images/events/hashitout.jpeg",
         "title" : "Hash it Out",
         "date" : "18 April 2023",
         "time" : "5 hours",
@@ -44,7 +44,7 @@
     },
     {
         "eventid" : "3",
-        "src" : "./images/icon.jpeg",
+        "src" : "./images/events/bridgemania.jpeg",
         "title" : "Bridge Mania",
         "date" : "18 April 2023",
         "time" : "5 hours",
@@ -58,7 +58,7 @@
     },
     {
         "eventid" : "4",
-        "src" : "./images/icon.jpeg",
+        "src" : "./images/events/roborace.jpeg",
         "title" : "Robo Race",
         "date" : "18 April 2023",
         "time" : "6 hours",
@@ -72,7 +72,7 @@
     },
     {
         "eventid" : "5",
-        "src" : "./images/icon.jpeg",
+        "src" : "./images/events/thinktank.jpeg",
         "title" : "Think Tank",
         "date" : "18 April 2023",
         "time" : "5 hours",
@@ -86,7 +86,7 @@
     },
     {
         "eventid" : "6",
-        "src" : "./images/icon.jpeg",
+        "src" : "./images/events/offroadrumble.jpeg",
         "title" : "Offroad Rumble",
         "date" : "18 April 2023",
         "time" : "1:30pm onwards",
@@ -100,7 +100,7 @@
     },
     {
         "eventid" : "7",
-        "src" : "./images/icon.jpeg",
+        "src" : "./images/events/eleantra.jpeg",
         "title" : "Elentra",
         "date" : "18 April 2023",
         "time" : "5 hours",
@@ -114,7 +114,7 @@
     },
     {
         "eventid" : "8",
-        "src" : "./images/icon.jpeg",
+        "src" : "./images/events/saudagar.jpeg",
         "title" : "Saudagar",
         "date" : "18 April 2023",
         "time" : "5 hours",
@@ -128,7 +128,7 @@
     },
     {
         "eventid" : "9",
-        "src" : "./images/icon.jpeg",
+        "src" : "./images/events/robowrestling.jpeg",
         "title" : "Robo Wrestling",
         "date" : "18 April 2023",
         "time" : "7 hours",
@@ -142,7 +142,7 @@
     },
     {
         "eventid" : "10",
-        "src" : "./images/icon.jpeg",
+        "src" : "./images/events/treasuremania.jpeg",
         "title" : "Treasure Mania",
         "date" : "18 April 2023",
         "time" : "4-5 hours",
@@ -156,7 +156,7 @@
     },
     {
         "eventid" : "11",
-        "src" : "./images/icon.jpeg",
+        "src" : "./images/events/fifa.jpeg",
         "title" : "Madmax (Fifa) Solo",
         "date" : "18 April 2023",
         "time" : "5 hours",
@@ -170,7 +170,7 @@
     },
     {
         "eventid" : "12",
-        "src" : "./images/icon.jpeg",
+        "src" : "./images/events/fifa.jpeg",
         "title" : "Madmax (Fifa) Duo",
         "date" : "18 April 2023",
         "time" : "5 hours",
@@ -184,7 +184,7 @@
     },
     {
         "eventid" : "13",
-        "src" : "./images/icon.jpeg",
+        "src" : "./images/events/valorant.jpeg",
         "title" : "Madmax (Valorant)",
         "date" : "18 April 2023",
         "time" : "5 hours",
@@ -198,7 +198,7 @@
     },
     {
         "eventid" : "14",
-        "src" : "./images/icon.jpeg",
+        "src" : "./images/events/electromaze.jpeg",
         "title" : "Electromaze (Solo)",
         "date" : "18 April 2023",
         "time" : "2hrs 30mins",
@@ -212,7 +212,7 @@
     },
     {
         "eventid" : "15",
-        "src" : "./images/icon.jpeg",
+        "src" : "./images/events/electromaze.jpeg",
         "title" : "Electromaze (Group)",
         "date" : "18 April 2023",
         "time" : "2hrs 30mins",
@@ -226,7 +226,7 @@
     },
     {
         "eventid" : "16",
-        "src" : "./images/icon.jpeg",
+        "src" : "./images/events/mysteryquest.jpeg",
         "title" : "Mystery Quest (Solo)",
         "date" : "18 April 2023",
         "time" : "2hrs 30mins",
@@ -240,7 +240,7 @@
     },
     {
         "eventid" : "17",
-        "src" : "./images/icon.jpeg",
+        "src" : "./images/events/mysteryquest.jpeg",
         "title" : "Mystery Quest (Group)",
         "date" : "18 April 2023",
         "time" : "2hrs 30mins",
@@ -250,12 +250,12 @@
         "groupOrPerson" : "group",
         "minMembers" : "2",
         "maxMembers" : "4",
-        "desc" : "MMystery Quest is an engaging quiz game that challenges participants in electrical and electronics. It includes three rounds: a multiple-choice online quiz, a crossword puzzle, and an \"escape room\" challenge. The game tests participants' knowledge, problem-solving skills, and creativity. Register now to put your skills to the test and enjoy an interactive experience!"
+        "desc" : "Mystery Quest is an engaging quiz game that challenges participants in electrical and electronics. It includes three rounds: a multiple-choice online quiz, a crossword puzzle, and an \"escape room\" challenge. The game tests participants' knowledge, problem-solving skills, and creativity. Register now to put your skills to the test and enjoy an interactive experience!"
     },
     {
         "eventid" : "18",
-        "src" : "./images/icon.jpeg",
-        "title" : "Techfued",
+        "src" : "./images/events/techfluid.jpeg",
+        "title" : "Techfluid",
         "date" : "18 April 2023",
         "time" : "8 hours",
         "location" : "DYPIT, Pimpri",
