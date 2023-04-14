@@ -30,7 +30,7 @@ function Team() {
               name="Mayur Sawant"
             />
           </div>
-          <h3>Event Sub-Coordinators</h3>
+          <h3>Event Sub-Coordinator</h3>
           <div class="team-members">
             <TeamCard src={"images/team/surajYadav.jpg"} name="Suraj Yadav" />
             {/* <TeamCard src={"images/team/Santosh Dukare.jpg"} name="Santosh Dukare"/> */}
@@ -67,7 +67,7 @@ function Team() {
             <TeamCard src={"images/team/ruchi.jpg"} name="Ruchi Nagwanshi" />
             <TeamCard src={"images/team/Ayush Jain.jpeg"} name="Ayush Jain" />
           </div>
-          <h3>Content Heads</h3>
+          <h3>Content Head</h3>
           <div class="team-members">
             <TeamCard
               src={"images/team/Sagar Ghodke.jpg"}
@@ -93,13 +93,16 @@ function Team() {
               src={"images/team/Yashwant Jadhav .jpg"}
               name="Yashwant Jadhav"
             />
-            <TeamCard src={"images/team/icon.jpeg"} name="Shreyas Udavant" />
+            <TeamCard
+              src={"images/team/Shreyas Udawant.jpg"}
+              name="Shreyas Udawant"
+            />
           </div>
           <h3>Editor</h3>
           <div class="team-members">
             <TeamCard src={"images/team/Vicky Sinha.jpg"} name="Vicky Sinha" />
           </div>
-          <h3>Video Editor</h3>
+          <h3>Video Editors</h3>
           <div class="team-members">
             <TeamCard src={"images/team/Kunal Bhoi.jpg"} name="Kunal Bhoi" />
             <TeamCard
@@ -118,7 +121,7 @@ function Team() {
               name="Suved Pardeshi"
             />
           </div>
-          <h3>Tech Support Heads</h3>
+          <h3>Tech Support Team</h3>
           <div class="team-members">
             <TeamCard src={"images/team/Harsh Anand.jpg"} name="Harsh Anand" />
             <TeamCard
