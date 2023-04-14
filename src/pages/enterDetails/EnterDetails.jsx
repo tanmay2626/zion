@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 
 function EnterDetails(props) {
   const navigate = useNavigate();
-  const [error, setError] = useState(null);
+  //const [error, setError] = useState(null);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [college, setCollege] = useState("");
@@ -31,9 +31,9 @@ function EnterDetails(props) {
     setCollege(event.target.value);
   };
 
-  const handleChangeCollege = (e) =>{
+  const handleChangeCollege = (e) => {
     setOtherCollegeName(e.target.value);
-  }
+  };
 
   const handleChange = (e) => {
     const { value, name } = e.target;
@@ -48,7 +48,7 @@ function EnterDetails(props) {
   const handleSubmit = () => {
     const data = {
       email: email,
-      college: (college == 'Other' ? otherCollegeName : college),
+      college: college == "Other" ? otherCollegeName : college,
       useranme: username,
       mobile: details.number,
       name: details.name,
@@ -56,6 +56,9 @@ function EnterDetails(props) {
     localStorage.setItem("details", JSON.stringify(data));
     navigate("/register");
   };
+
+  const token = localStorage.getItem("token");
+
   return (
     <>
       <Navbar active={"register"} />
@@ -63,71 +66,75 @@ function EnterDetails(props) {
         <h2>Register</h2>
         <div className="details-container">
           <GoogleAuth setEmail={setEmail} />
-          <TextField
-            id="outlined-basic"
-            label="Name"
-            variant="outlined"
-            fullWidth
-            name="name"
-            onChange={handleChange}
-            required
-            // value={userDetails.name}
-          />
-          <TextField
-            id="outlined-basic"
-            label="Create ActualOne Username"
-            variant="outlined"
-            type="text"
-            name="username"
-            fullWidth
-            onChange={handleUsername}
-            required
-            // value={userDetails.email}
-          />
-          <TextField
-            id="outlined-basic"
-            label="Mobile Number"
-            variant="outlined"
-            name="number"
-            fullWidth
-            onChange={handleChange}
-            required
-            // value={userDetails.number}
-          />
-          <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">College</InputLabel>
-            <Select
-              sx={{ width: 100 + "%" }}
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              label="College"
-              value={college}
-              onChange={handleCollege}
-            >
-              <MenuItem
-                value={"Dr. D. Y. Patil Institute of Technology, Pimpri"}
-              >
-                Dr. D. Y. Patil Institute of Technology, Pimpri
-              </MenuItem>
-              <MenuItem value={"Other"}>Other</MenuItem>
-            </Select>
-          </FormControl>
-          {college == "Other" ? (
-            <TextField
-              id="outlined-basic"
-              label="College Name"
-              variant="outlined"
-              name="College Name"
-              fullWidth
-              value={otherCollegeName}
-              onChange={handleChangeCollege}
-              required
-              // value={userDetails.number}
-            />
-          ) : null}
-          <button onClick={handleSubmit} className="participate">
-            Participate Now
-          </button>
+          {token && (
+            <div className="details-box">
+              <TextField
+                id="outlined-basic"
+                label="Name"
+                variant="outlined"
+                fullWidth
+                name="name"
+                onChange={handleChange}
+                required
+                // value={userDetails.name}
+              />
+              <TextField
+                id="outlined-basic"
+                label="Username"
+                variant="outlined"
+                type="text"
+                name="username"
+                fullWidth
+                onChange={handleUsername}
+                required
+                // value={userDetails.email}
+              />
+              <TextField
+                id="outlined-basic"
+                label="Mobile Number"
+                variant="outlined"
+                name="number"
+                fullWidth
+                onChange={handleChange}
+                required
+                // value={userDetails.number}
+              />
+              <FormControl fullWidth>
+                <InputLabel id="demo-simple-select-label">College</InputLabel>
+                <Select
+                  sx={{ width: 100 + "%" }}
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  label="College"
+                  value={college}
+                  onChange={handleCollege}
+                >
+                  <MenuItem
+                    value={"Dr. D. Y. Patil Institute of Technology, Pimpri"}
+                  >
+                    Dr. D. Y. Patil Institute of Technology, Pimpri
+                  </MenuItem>
+                  <MenuItem value={"Other"}>Other</MenuItem>
+                </Select>
+              </FormControl>
+              {college == "Other" ? (
+                <TextField
+                  id="outlined-basic"
+                  label="College Name"
+                  variant="outlined"
+                  name="College Name"
+                  fullWidth
+                  value={otherCollegeName}
+                  onChange={handleChangeCollege}
+                  required
+                  // value={userDetails.number}
+                />
+              ) : null}
+              <button onClick={handleSubmit} className="participate">
+                Participate Now
+              </button>
+            </div>
+          )}
         </div>
       </section>
       <Footer />
