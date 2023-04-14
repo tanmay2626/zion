@@ -15,34 +15,6 @@
         "desc" : "Neo coding competition has three rounds: a 30-minute qualifying round with 25 multiple-choice questions, a 1-hour coding contest with 25 questions, and a final 1-hour contest with three questions of varying difficulty levels. It aims to test coders' knowledge and skill in various areas of coding, from basics to advanced topics."
     },
     {
-        "eventid" : "1",
-        "src" : "./images/bug-smash.jpg",
-        "title" : "Bug Smash",
-        "date" : "20 April 2023",
-        "time" : "5 hours",
-        "location" : "DYPIT, Pimpri",
-        "prizePool" : "₹2,500",
-        "price" : "50",
-        "groupOrPerson" : "person",
-        "minMembers" : "1",
-        "maxMembers" : "1",
-        "desc" : "The ultimate coding contest Bug Smash has three rounds: Debugging, Blind Coding, and Writing a Complete Code. These rounds challenge a coder's skill in fixing errors, visualizing and planning code, and writing efficient and clean code. The contest is open to all coders, and promises a thrilling competition with the best."
-    },
-    {
-        "eventid" : "2",
-        "src" : "./images/events/hashitout.jpeg",
-        "title" : "Hash it Out",
-        "date" : "20 April 2023",
-        "time" : "5 hours",
-        "location" : "DYPIT, Pimpri",
-        "prizePool" : "₹10,000",
-        "price" : "200",
-        "groupOrPerson" : "group",
-        "minMembers" : "2",
-        "maxMembers" : "4",
-        "desc" : "Hash It Out is a two-round programming event that tests coding enthusiasts' knowledge and skills. Round one has two coding questions, while round two has advanced questions. It's a great opportunity for programmers to network and learn new skills. The event promises exciting challenges and valuable prizes. Join us for a thrilling coding experience by registering now!"
-    },
-    {
         "eventid" : "3",
         "src" : "./images/events/bridgemania.jpeg",
         "title" : "Bridge Mania",
@@ -55,20 +27,6 @@
         "minMembers" : "2",
         "maxMembers" : "4",
         "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation. agna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
-    },
-    {
-        "eventid" : "4",
-        "src" : "./images/events/roborace.jpeg",
-        "title" : "Robo Race",
-        "date" : "21 April 2023",
-        "time" : "6 hours",
-        "location" : "DYPIT, Pimpri",
-        "prizePool" : "₹10,000",
-        "price" : "200",
-        "groupOrPerson" : "group",
-        "minMembers" : "2",
-        "maxMembers" : "4",
-        "desc" : "Robo-Race is a global robotics event with three challenging rounds. The knockout round is a 2-hour race to complete the track in the shortest time possible. In the timer round, participants must navigate their vehicles through obstacles to advance. The final round is a test of skill and creativity to reach a specific location. Robo-Race is a chance to showcase robotics skills and compete with other enthusiasts. Register now for an unforgettable experience!"
     },
     {
         "eventid" : "5",
@@ -113,18 +71,45 @@
         "desc" : "Elentra is an exciting electrical event with three challenging rounds to showcase participants' skills. Round 1 requires correcting circuits, Round 2 involves completing half-drawn circuits, and the final round involves designing a hardware circuit based on given conditions. Register now to showcase your skills!"
     },
     {
-        "eventid" : "8",
-        "src" : "./images/events/Saudagar.jpg",
-        "title" : "Saudagar",
-        "date" : "21 April 2023",
+        "eventid" : "18",
+        "src" : "./images/events/techfluid.jpeg",
+        "title" : "Techfeud",
+        "date" : "19 April 2023",
+        "time" : "8 hours",
+        "location" : "DYPIT, Pimpri",
+        "prizePool" : "₹5,000",
+        "price" : "200",
+        "minMembers" : "3",
+        "maxMembers" : "5",
+        "desc" : "Techfued is an event for tech enthusiasts, showcasing latest advancements in AI, robotics, blockchain, and IoT. Participants engage in workshops, presentations, and networking with like-minded individuals and companies. Whether you're a startup, investor, or tech enthusiast, it promises to be an unforgettable experience."
+    },
+    {
+        "eventid" : "1",
+        "src" : "./images/bug-smash.jpg",
+        "title" : "Bug Smash",
+        "date" : "20 April 2023",
+        "time" : "5 hours",
+        "location" : "DYPIT, Pimpri",
+        "prizePool" : "₹2,500",
+        "price" : "50",
+        "groupOrPerson" : "person",
+        "minMembers" : "1",
+        "maxMembers" : "1",
+        "desc" : "The ultimate coding contest Bug Smash has three rounds: Debugging, Blind Coding, and Writing a Complete Code. These rounds challenge a coder's skill in fixing errors, visualizing and planning code, and writing efficient and clean code. The contest is open to all coders, and promises a thrilling competition with the best."
+    },
+    {
+        "eventid" : "2",
+        "src" : "./images/events/hashitout.jpeg",
+        "title" : "Hash it Out",
+        "date" : "20 April 2023",
         "time" : "5 hours",
         "location" : "DYPIT, Pimpri",
         "prizePool" : "₹10,000",
-        "price" : "100",
+        "price" : "200",
         "groupOrPerson" : "group",
-        "minMembers" : "1",
+        "minMembers" : "2",
         "maxMembers" : "4",
-        "desc" : "Buisness plan competition organised by department of MBA in Zion Techfest"
+        "desc" : "Hash It Out is a two-round programming event that tests coding enthusiasts' knowledge and skills. Round one has two coding questions, while round two has advanced questions. It's a great opportunity for programmers to network and learn new skills. The event promises exciting challenges and valuable prizes. Join us for a thrilling coding experience by registering now!"
     },
     {
         "eventid" : "9",
@@ -139,20 +124,6 @@
         "minMembers" : "1",
         "maxMembers" : "4",
         "desc" : "Robo-Wrestling is a thrilling event that brings together robotics enthusiasts from all over to compete in three rounds. Participants showcase their robot building skills as their bots wrestle with each other, and the winners face off in the final round to showcase their robot's strength and agility. Top performers are selected at the end of the event. Register now to showcase your robotics skills and compete in this exciting event!"
-    },
-    {
-        "eventid" : "10",
-        "src" : "./images/events/treasuremania.jpeg",
-        "title" : "Treasure Mania",
-        "date" : "21 April 2023",
-        "time" : "4-5 hours",
-        "location" : "DYPIT, Pimpri",
-        "prizePool" : "₹10,000 + Goodies",
-        "price" : "200",
-        "groupOrPerson" : "group",
-        "minMembers" : "3",
-        "maxMembers" : "5",
-        "desc" : "Join us for a thrilling treasure hunt! Solve clues, riddles, and puzzles as you explore the city, seeking hidden treasures and uncovering secrets along the way. Follow the map, hunt for clues, and use your wits to decipher the codes. With a team, it's the perfect way to spend an afternoon outdoors. So get ready to put your problem-solving skills to the test and discover hidden riches!"
     },
     {
         "eventid" : "11",
@@ -195,6 +166,49 @@
         "minMembers" : "5",
         "maxMembers" : "5",
         "desc" : "Valorant is a competitive game where 16 teams of 5 players each compete to be victorious. With unique abilities and strategic teamwork, players battle it out on various maps and game modes. This fast-paced game requires skill and tactical thinking to dominate the battlefield. Join the competition and prove your abilities in Valorant!"
+    },
+
+    {
+        "eventid" : "4",
+        "src" : "./images/events/roborace.jpeg",
+        "title" : "Robo Race",
+        "date" : "21 April 2023",
+        "time" : "6 hours",
+        "location" : "DYPIT, Pimpri",
+        "prizePool" : "₹10,000",
+        "price" : "200",
+        "groupOrPerson" : "group",
+        "minMembers" : "2",
+        "maxMembers" : "4",
+        "desc" : "Robo-Race is a global robotics event with three challenging rounds. The knockout round is a 2-hour race to complete the track in the shortest time possible. In the timer round, participants must navigate their vehicles through obstacles to advance. The final round is a test of skill and creativity to reach a specific location. Robo-Race is a chance to showcase robotics skills and compete with other enthusiasts. Register now for an unforgettable experience!"
+    },
+    {
+        "eventid" : "10",
+        "src" : "./images/events/treasuremania.jpeg",
+        "title" : "Treasure Mania",
+        "date" : "21 April 2023",
+        "time" : "4-5 hours",
+        "location" : "DYPIT, Pimpri",
+        "prizePool" : "₹10,000 + Goodies",
+        "price" : "200",
+        "groupOrPerson" : "group",
+        "minMembers" : "3",
+        "maxMembers" : "5",
+        "desc" : "Join us for a thrilling treasure hunt! Solve clues, riddles, and puzzles as you explore the city, seeking hidden treasures and uncovering secrets along the way. Follow the map, hunt for clues, and use your wits to decipher the codes. With a team, it's the perfect way to spend an afternoon outdoors. So get ready to put your problem-solving skills to the test and discover hidden riches!"
+    },
+    {
+        "eventid" : "8",
+        "src" : "./images/events/Saudagar.jpg",
+        "title" : "Saudagar",
+        "date" : "21 April 2023",
+        "time" : "5 hours",
+        "location" : "DYPIT, Pimpri",
+        "prizePool" : "₹10,000",
+        "price" : "100",
+        "groupOrPerson" : "group",
+        "minMembers" : "1",
+        "maxMembers" : "4",
+        "desc" : "Buisness plan competition organised by department of MBA in Zion Techfest"
     },
     {
         "eventid" : "14",
@@ -251,19 +265,6 @@
         "minMembers" : "2",
         "maxMembers" : "4",
         "desc" : "Mystery Quest is an engaging quiz game that challenges participants in electrical and electronics. It includes three rounds: a multiple-choice online quiz, a crossword puzzle, and an \"escape room\" challenge. The game tests participants' knowledge, problem-solving skills, and creativity. Register now to put your skills to the test and enjoy an interactive experience!"
-    },
-    {
-        "eventid" : "18",
-        "src" : "./images/events/techfluid.jpeg",
-        "title" : "Techfeud",
-        "date" : "19 April 2023",
-        "time" : "8 hours",
-        "location" : "DYPIT, Pimpri",
-        "prizePool" : "₹5,000",
-        "price" : "200",
-        "minMembers" : "3",
-        "maxMembers" : "5",
-        "desc" : "Techfued is an event for tech enthusiasts, showcasing latest advancements in AI, robotics, blockchain, and IoT. Participants engage in workshops, presentations, and networking with like-minded individuals and companies. Whether you're a startup, investor, or tech enthusiast, it promises to be an unforgettable experience."
     }
   ]
 }
