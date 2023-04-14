@@ -55,7 +55,6 @@ function EnterDetails(props) {
     const data = {
       email: email,
       college: collegeName === "Other" ? otherCollegeName : collegeName,
-      useranme: username,
       mobile: mobileNumber,
       name: name,
     };
