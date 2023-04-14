@@ -18,9 +18,12 @@ export default function Payment() {
     const currFile = event.target.files[0];
     const formData = new FormData();
     formData.append("file", currFile);
-    formData.append("upload_preset", "hhfnuhff");
+    formData.append("upload_preset", process.env.REACT_APP_PRESENT);
     axios
-      .post("https://api.cloudinary.com/v1_1/dldntxfqv/upload", formData)
+      .post(
+        `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_DB}/upload`,
+        formData
+      )
       .then((res) => {
         setFile(res.data.secure_url);
       })
@@ -62,10 +65,7 @@ export default function Payment() {
     formData.append("ImgUrl", file);
 
     axios
-      .post(
-        "https://script.google.com/macros/s/AKfycbzFzrHO7QWw4yTq5eYBeIPDKo4FfY3_MzKCVuQb-mg8BreKKJhmZG2Pzfe2XRkHoAVC/exec",
-        formData
-      )
+      .post(process.env.REACT_APP_SUBMISSIONS_SHEET_ID, formData)
       .then((res) => {
         localStorage.setItem("id", referenceid);
         navigate("/success");

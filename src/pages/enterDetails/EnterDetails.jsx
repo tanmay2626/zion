@@ -67,10 +67,7 @@ function EnterDetails(props) {
     formData.append("Email", email);
 
     axios
-      .post(
-        "https://script.google.com/macros/s/AKfycbzznHIwal0QMGVez1I0yAUUtJTPoRc37z3silegTBOqQkWptwV7NNp8SEaQhAGLJNru/exec",
-        formData
-      )
+      .post(process.env.REACT_APP_REGISTER_SHEET_ID, formData)
       .then((res) => {
         navigate("/register");
       })
