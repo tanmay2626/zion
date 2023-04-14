@@ -72,7 +72,7 @@
     },
     {
         "eventid" : "18",
-        "src" : "./images/events/techflued.jpeg",
+        "src" : "./images/events/TechFeud Logo.jpeg",
         "title" : "Techfeud",
         "date" : "19 April 2023",
         "time" : "8 hours",
@@ -81,7 +81,7 @@
         "price" : "200",
         "minMembers" : "3",
         "maxMembers" : "5",
-        "desc" : "Techfued is an event for tech enthusiasts, showcasing latest advancements in AI, robotics, blockchain, and IoT. Participants engage in workshops, presentations, and networking with like-minded individuals and companies. Whether you're a startup, investor, or tech enthusiast, it promises to be an unforgettable experience."
+        "desc" : "Tech Feud is a 3-round Technical Quiz which is based on the popular TV show “Family Feud” but with technical questions.Two teams would compete against each other with techinal questions, the team to press the buzzer in front of them first, would answer the asked question first"
     },
     {
         "eventid" : "1",
