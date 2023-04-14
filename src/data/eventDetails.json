@@ -26,7 +26,7 @@
         "groupOrPerson" : "group",
         "minMembers" : "2",
         "maxMembers" : "4",
-        "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation. agna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Ut enim ad minim veniam, quis nostrud exercitation."
+        "desc" : "This is a bridge-making event where participants form groups, select a leader, and construct a bridge model using provided materials within a two-hour timeframe. Deviations from given dimensions and materials will result in disqualification. The goal is to construct a functional bridge model."
     },
     {
         "eventid" : "5",
@@ -40,7 +40,7 @@
         "groupOrPerson" : "group",
         "minMembers" : "1",
         "maxMembers" : "4",
-        "desc" : "Think Tank is a three-round event designed for entrepreneurs and startup owners. The first round involves presenting products to judges. In round two, participants discuss market trends and challenges. In round three, participants create a marketing script and tagline. Winners receive recognition for their marketing strategies. Think Tank provides networking opportunities and business insights. Register now for an informative and exciting event!"
+        "desc" : "Elevate your business at Think Tank - present products, discuss market trends, and create winning marketing strategies in three challenging rounds. Gain recognition, network with peers, and get valuable business insights. Register now for the ultimate event for entrepreneurs and startup owners!"
     },
     {
         "eventid" : "6",
@@ -54,7 +54,7 @@
         "groupOrPerson" : "group",
         "minMembers" : "1",
         "maxMembers" : "4",
-        "desc" : "Offroad rumble is an exhilarating event where offroad vehicles race through rugged terrain, facing challenging obstacles and extreme terrain. This adrenaline-fueled competition tests drivers' skills, vehicles' capabilities, and endurance in a wild and unpredictable environment. From rocky hills and deep mud pits to steep slopes and water crossings, the offroad rumble event offers a thrilling experience for both participants and spectators alike."
+        "desc" : "Experience the thrill of Offroad Rumble - a competition where offroad vehicles race through rugged terrain, facing extreme challenges and obstacles. Test your skills, vehicle capabilities, and endurance in a wild and unpredictable environment with rocky hills, mud pits, slopes, and water crossings. Join us now for an unforgettable adventure!"
     },
     {
         "eventid" : "7",
@@ -72,7 +72,7 @@
     },
     {
         "eventid" : "18",
-        "src" : "./images/events/techfluid.jpeg",
+        "src" : "./images/events/techflued.jpeg",
         "title" : "Techfeud",
         "date" : "19 April 2023",
         "time" : "8 hours",
@@ -123,7 +123,7 @@
         "groupOrPerson" : "group",
         "minMembers" : "1",
         "maxMembers" : "4",
-        "desc" : "Robo-Wrestling is a thrilling event that brings together robotics enthusiasts from all over to compete in three rounds. Participants showcase their robot building skills as their bots wrestle with each other, and the winners face off in the final round to showcase their robot's strength and agility. Top performers are selected at the end of the event. Register now to showcase your robotics skills and compete in this exciting event!"
+        "desc" : "Robo-Wrestling is a thrilling event for robotics enthusiasts, featuring three competitive rounds. Show off your bot building skills as your robots wrestle, with the winners facing off in the final round to showcase their strength and agility. Register now to showcase your skills and compete in this exciting event, with top performers selected at the end!"
     },
     {
         "eventid" : "11",
@@ -180,7 +180,7 @@
         "groupOrPerson" : "group",
         "minMembers" : "2",
         "maxMembers" : "4",
-        "desc" : "Robo-Race is a global robotics event with three challenging rounds. The knockout round is a 2-hour race to complete the track in the shortest time possible. In the timer round, participants must navigate their vehicles through obstacles to advance. The final round is a test of skill and creativity to reach a specific location. Robo-Race is a chance to showcase robotics skills and compete with other enthusiasts. Register now for an unforgettable experience!"
+        "desc" : "Join the Robo-Race - a thrilling global robotics event with 3 challenging rounds. Complete the track in the knockout round, navigate obstacles in the timer round, and demonstrate your creativity in the final round. Showcase your skills and compete with other enthusiasts in this unforgettable experience. Register now!"
     },
     {
         "eventid" : "10",
