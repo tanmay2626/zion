@@ -60,7 +60,10 @@ export default function Payment() {
         console.log(err);
       });
 
-    //localStorage.removeItem("details");
+    localStorage.removeItem("details");
+    localStorage.removeItem("eventsSelected");
+    localStorage.removeItem("cartValue");
+    localStorage.removeItem("token");
   };
   return (
     <>

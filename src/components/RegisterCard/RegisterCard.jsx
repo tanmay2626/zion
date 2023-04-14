@@ -24,7 +24,7 @@ function RegisterCard({
   const [members, setMembers] = useState(maxMembers);
   const [selected, setSelected] = useState(false);
   maxMembers = parseInt(maxMembers);
-  const arr = new Array(maxMembers - minMembers +1);
+  const arr = new Array(maxMembers - minMembers + 1);
   for (let i = 0; i < arr.length; i++) {
     arr[i] = parseInt(minMembers) + i;
   }
@@ -44,7 +44,7 @@ function RegisterCard({
         return prev + parseInt(price);
       });
       setEventsSelected((prev) => {
-        return [...prev, { eventid: value, members: members }];
+        return [...prev, { eventid: value, members: members, title: title }];
       });
     } else {
       setCart((prev) => {
@@ -81,7 +81,8 @@ function RegisterCard({
         <div className="left" onClick={handleDetailOpener}>
           <h3>{title}</h3>
           <div className="price">
-            <span>Entry fee : </span>₹{price}{groupOrPerson == "person" ? "/person" : "/group"}
+            <span>Entry fee : </span>₹{price}
+            {groupOrPerson == "person" ? "/person" : "/group"}
           </div>
         </div>
         {selected ? (
