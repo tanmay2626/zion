@@ -4,6 +4,7 @@ import Events from "../events/Events";
 import "./home.scss";
 
 function Home() {
+  localStorage.clear();
   const d2 = new Date("04/19/2023");
   const d1 = new Date();
   var diff = d2.getTime() - d1.getTime();
@@ -49,7 +50,7 @@ function Home() {
             <AboutCard
               title={"/Zion"}
               desc={
-                'Zion is an annual technical festival organized by Dr. D.Y. Patil Institute of Technology, Pimpri, Pune, that aims to provide a platform for students to showcase their technical skills and creativity.'
+                "Zion is an annual technical festival organized by Dr. D.Y. Patil Institute of Technology, Pimpri, Pune, that aims to provide a platform for students to showcase their technical skills and creativity."
               }
             />
             <AboutCard
@@ -77,7 +78,9 @@ function Home() {
             />
             <AboutCard
               title={"Hackathons"}
-              desc={"Hackathons that provide a platform for students to collaborate, innovate and build exciting projects within a limited time frame."}
+              desc={
+                "Hackathons that provide a platform for students to collaborate, innovate and build exciting projects within a limited time frame."
+              }
             />
             <AboutCard
               title={"Tech Talk"}

@@ -7,6 +7,7 @@ function GoogleAuth(props) {
     const cred = jwt_decode(res.credential);
     setUser(cred.email);
     props.setEmail(cred.email);
+    localStorage.setItem("token", res.credential);
     document.getElementById("signIn").hidden = true;
   };
 

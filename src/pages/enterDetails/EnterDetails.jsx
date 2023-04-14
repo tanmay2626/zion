@@ -11,51 +11,77 @@ import "./enterDetails.scss";
 import GoogleAuth from "../../components/GoogleAuth/GoogleAuth";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function EnterDetails(props) {
   const navigate = useNavigate();
-  const [error, setError] = useState(null);
+  //const [error, setError] = useState(null);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
-  const [college, setCollege] = useState("");
+  const [collegeName, setCollegeName] = useState("");
   const [otherCollegeName, setOtherCollegeName] = useState("");
-  const [details, setDetails] = useState({
-    name: "",
-    number: 0,
-  });
-  const handleUsername = (event) => {
+  const [name, setName] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("");
+  const [mobileNumberError, setMobileNumberError] = useState(false);
+  const handleChangeUsername = (event) => {
     setUsername(event.target.value);
   };
 
   const handleCollege = (event) => {
-    setCollege(event.target.value);
+    setCollegeName(event.target.value);
   };
 
-  const handleChangeCollege = (e) =>{
-    setOtherCollegeName(e.target.value);
-  }
-
-  const handleChange = (e) => {
-    const { value, name } = e.target;
-    setDetails((prev) => {
-      return {
-        ...prev,
-        [name]: value,
-      };
-    });
+  const handleChangeCollege = (event) => {
+    setOtherCollegeName(event.target.value);
   };
 
-  const handleSubmit = () => {
+  const handleChangeName = (event) => {
+    setName(event.target.value);
+  };
+
+  const handleMobileNumberChange = (event) => {
+    const inputMobileNumber = event.target.value;
+    const mobileNumberRegex = /^[0-9]{10}$/;
+    if (mobileNumberRegex.test(inputMobileNumber)) {
+      setMobileNumber(inputMobileNumber);
+      setMobileNumberError(false);
+    } else {
+      setMobileNumberError(true);
+    }
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
     const data = {
       email: email,
-      college: (college == 'Other' ? otherCollegeName : college),
+      college: collegeName === "Other" ? otherCollegeName : collegeName,
       useranme: username,
-      mobile: details.number,
-      name: details.name,
+      mobile: mobileNumber,
+      name: name,
     };
     localStorage.setItem("details", JSON.stringify(data));
-    navigate("/register");
+
+    const formData = new FormData();
+
+    formData.append("Name", name);
+    formData.append("Username", username);
+    formData.append("Email", email);
+
+    axios
+      .post(
+        "https://script.google.com/macros/s/AKfycbzznHIwal0QMGVez1I0yAUUtJTPoRc37z3silegTBOqQkWptwV7NNp8SEaQhAGLJNru/exec",
+        formData
+      )
+      .then((res) => {
+        navigate("/register");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
+
+  const token = localStorage.getItem("token");
+
   return (
     <>
       <Navbar active={"register"} />
@@ -63,71 +89,86 @@ function EnterDetails(props) {
         <h2>Register</h2>
         <div className="details-container">
           <GoogleAuth setEmail={setEmail} />
-          <TextField
-            id="outlined-basic"
-            label="Name"
-            variant="outlined"
-            fullWidth
-            name="name"
-            onChange={handleChange}
-            required
-            // value={userDetails.name}
-          />
-          <TextField
-            id="outlined-basic"
-            label="Create ActualOne Username"
-            variant="outlined"
-            type="text"
-            name="username"
-            fullWidth
-            onChange={handleUsername}
-            required
-            // value={userDetails.email}
-          />
-          <TextField
-            id="outlined-basic"
-            label="Mobile Number"
-            variant="outlined"
-            name="number"
-            fullWidth
-            onChange={handleChange}
-            required
-            // value={userDetails.number}
-          />
-          <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">College</InputLabel>
-            <Select
-              sx={{ width: 100 + "%" }}
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              label="College"
-              value={college}
-              onChange={handleCollege}
-            >
-              <MenuItem
-                value={"Dr. D. Y. Patil Institute of Technology, Pimpri"}
+          {token && (
+            <form onSubmit={handleSubmit} className="details-box">
+              <TextField
+                id="outlined-basic"
+                label="Name"
+                variant="outlined"
+                fullWidth
+                value={name}
+                name="name"
+                onChange={handleChangeName}
+                required
+                // value={userDetails.name}
+              />
+              <TextField
+                id="outlined-basic"
+                label="Username"
+                variant="outlined"
+                type="text"
+                name="username"
+                value={username}
+                fullWidth
+                onChange={handleChangeUsername}
+                required
+                // value={userDetails.email}
+              />
+              <TextField
+                id="outlined-basic"
+                label="Mobile Number"
+                variant="outlined"
+                type="text"
+                name="mobile"
+                error={mobileNumberError}
+                required
+                fullWidth
+                onChange={handleMobileNumberChange}
+                // value={userDetails.number}
+              />
+              <FormControl fullWidth>
+                <InputLabel id="demo-simple-select-label">College</InputLabel>
+                <Select
+                  sx={{ width: 100 + "%" }}
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  label="College"
+                  value={collegeName}
+                  onChange={handleCollege}
+                >
+                  <MenuItem
+                    value={"Dr. D. Y. Patil Institute of Technology, Pimpri"}
+                  >
+                    Dr. D. Y. Patil Institute of Technology, Pimpri
+                  </MenuItem>
+                  <MenuItem value={"Other"}>Other</MenuItem>
+                </Select>
+              </FormControl>
+              {collegeName === "Other" ? (
+                <TextField
+                  id="outlined-basic"
+                  label="College Name"
+                  variant="outlined"
+                  name="College Name"
+                  fullWidth
+                  value={otherCollegeName}
+                  onChange={handleChangeCollege}
+                  required
+                  // value={userDetails.number}
+                />
+              ) : null}
+              {(!name || !username || !collegeName || !mobileNumber) && (
+                <p>Please fill all required fields</p>
+              )}
+              <button
+                disabled={!name || !username || !collegeName || !mobileNumber}
+                className="participate"
+                type="submit"
               >
-                Dr. D. Y. Patil Institute of Technology, Pimpri
-              </MenuItem>
-              <MenuItem value={"Other"}>Other</MenuItem>
-            </Select>
-          </FormControl>
-          {college == "Other" ? (
-            <TextField
-              id="outlined-basic"
-              label="College Name"
-              variant="outlined"
-              name="College Name"
-              fullWidth
-              value={otherCollegeName}
-              onChange={handleChangeCollege}
-              required
-              // value={userDetails.number}
-            />
-          ) : null}
-          <button onClick={handleSubmit} className="participate">
-            Participate Now
-          </button>
+                Participate Now
+              </button>
+            </form>
+          )}
         </div>
       </section>
       <Footer />
