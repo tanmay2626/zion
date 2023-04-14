@@ -34,36 +34,41 @@ export default function Payment() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = localStorage.getItem("details");
+    const amount = localStorage.getItem("cartValue");
+    const events = localStorage.getItem("eventsSelected");
+    const eventsArray = JSON.parse(events);
+    const selectedEvents = eventsArray
+      .map((event) => `${event.title}:${event.members}`)
+      .join(", ");
     const details = JSON.parse(data);
     const name = details.name;
     const email = details.email;
     const college = details.college;
     const mobile = details.mobile;
 
-    const dataToSheet = {
-      Name: name,
-      Email: email,
-      Mobile: mobile,
-      College: college,
-      TransactionId: transaction,
-      ImgUrl: file,
-    };
+    const formData = new FormData();
+
+    formData.append("Name", name);
+    formData.append("Email", email);
+    formData.append("Mobile", mobile);
+    formData.append("College", college);
+    formData.append("Events", selectedEvents);
+    formData.append("TransactionId", transaction);
+    formData.append("Amount", amount);
+    formData.append("ImgUrl", file);
+
     axios
       .post(
-        "https://sheet.best/api/sheets/bd3072c0-9531-4149-990e-6fcf9b0ed2a8",
-        dataToSheet
+        "https://script.google.com/macros/s/AKfycbyNvWCMFjTBBLjZedXK8NtPLp5fR5OeFHcPPyOwcRT63bZ-iIKLl2ZrtUopTBYkrLkl/exec",
+        formData
       )
       .then((res) => {
         navigate("/success");
+        console.log("Success");
       })
       .catch((err) => {
         console.log(err);
       });
-
-    localStorage.removeItem("details");
-    localStorage.removeItem("eventsSelected");
-    localStorage.removeItem("cartValue");
-    localStorage.removeItem("token");
   };
   return (
     <>

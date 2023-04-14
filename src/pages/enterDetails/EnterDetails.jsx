@@ -11,6 +11,7 @@ import "./enterDetails.scss";
 import GoogleAuth from "../../components/GoogleAuth/GoogleAuth";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function EnterDetails(props) {
   const navigate = useNavigate();
@@ -45,7 +46,8 @@ function EnterDetails(props) {
     });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     const data = {
       email: email,
       college: college == "Other" ? otherCollegeName : college,
@@ -54,7 +56,24 @@ function EnterDetails(props) {
       name: details.name,
     };
     localStorage.setItem("details", JSON.stringify(data));
-    navigate("/register");
+
+    const formData = new FormData();
+
+    formData.append("Name", details.name);
+    formData.append("Username", username);
+    formData.append("Email", email);
+
+    axios
+      .post(
+        "https://script.google.com/macros/s/AKfycbzznHIwal0QMGVez1I0yAUUtJTPoRc37z3silegTBOqQkWptwV7NNp8SEaQhAGLJNru/exec",
+        formData
+      )
+      .then((res) => {
+        navigate("/register");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const token = localStorage.getItem("token");
