@@ -15,7 +15,7 @@ import axios from "axios";
 
 function EnterDetails(props) {
   const navigate = useNavigate();
-  //const [error, setError] = useState(null);
+  const [error, setError] = useState(null);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [collegeName, setCollegeName] = useState("");
@@ -60,19 +60,19 @@ function EnterDetails(props) {
     };
     localStorage.setItem("details", JSON.stringify(data));
 
-    const formData = new FormData();
-
-    formData.append("Name", name);
-    formData.append("Username", username);
-    formData.append("Email", email);
-
     axios
-      .post(process.env.REACT_APP_REGISTER_SHEET_ID, formData)
-      .then((res) => {
-        navigate("/register");
+      .post(process.env.REACT_APP_REGISTER_URL, {
+        name,
+        username,
+        email,
       })
-      .catch((err) => {
-        console.log(err);
+      .then((res) => {
+        if (res.status === 200 || res.status === 201) {
+          navigate("/register");
+        }
+      })
+      .catch((error) => {
+        setError(error.response.data.error);
       });
   };
 
@@ -153,6 +153,7 @@ function EnterDetails(props) {
                   // value={userDetails.number}
                 />
               ) : null}
+              {error && <p>{error}</p>}
               {(!name ||
                 !username ||
                 !collegeName ||
