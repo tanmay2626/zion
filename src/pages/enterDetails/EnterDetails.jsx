@@ -18,48 +18,52 @@ function EnterDetails(props) {
   //const [error, setError] = useState(null);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
-  const [college, setCollege] = useState("");
+  const [collegeName, setCollegeName] = useState("");
   const [otherCollegeName, setOtherCollegeName] = useState("");
-  const [details, setDetails] = useState({
-    name: "",
-    mobile: 0,
-  });
-  const handleUsername = (event) => {
+  const [name, setName] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("");
+  const [mobileNumberError, setMobileNumberError] = useState(false);
+  const handleChangeUsername = (event) => {
     setUsername(event.target.value);
   };
 
   const handleCollege = (event) => {
-    setCollege(event.target.value);
+    setCollegeName(event.target.value);
   };
 
-  const handleChangeCollege = (e) => {
-    setOtherCollegeName(e.target.value);
+  const handleChangeCollege = (event) => {
+    setOtherCollegeName(event.target.value);
   };
 
-  const handleChange = (e) => {
-    const { value, name } = e.target;
-    setDetails((prev) => {
-      return {
-        ...prev,
-        [name]: value,
-      };
-    });
+  const handleChangeName = (event) => {
+    setName(event.target.value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleMobileNumberChange = (event) => {
+    const inputMobileNumber = event.target.value;
+    const mobileNumberRegex = /^[0-9]{10}$/;
+    if (mobileNumberRegex.test(inputMobileNumber)) {
+      setMobileNumber(inputMobileNumber);
+      setMobileNumberError(false);
+    } else {
+      setMobileNumberError(true);
+    }
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
     const data = {
       email: email,
-      college: college == "Other" ? otherCollegeName : college,
+      college: collegeName === "Other" ? otherCollegeName : collegeName,
       useranme: username,
-      mobile: details.mobile,
-      name: details.name,
+      mobile: mobileNumber,
+      name: name,
     };
     localStorage.setItem("details", JSON.stringify(data));
 
     const formData = new FormData();
 
-    formData.append("Name", details.name);
+    formData.append("Name", name);
     formData.append("Username", username);
     formData.append("Email", email);
 
@@ -92,9 +96,9 @@ function EnterDetails(props) {
                 label="Name"
                 variant="outlined"
                 fullWidth
-                value={details.name}
+                value={name}
                 name="name"
-                onChange={handleChange}
+                onChange={handleChangeName}
                 required
                 // value={userDetails.name}
               />
@@ -106,7 +110,7 @@ function EnterDetails(props) {
                 name="username"
                 value={username}
                 fullWidth
-                onChange={handleUsername}
+                onChange={handleChangeUsername}
                 required
                 // value={userDetails.email}
               />
@@ -116,11 +120,10 @@ function EnterDetails(props) {
                 variant="outlined"
                 type="text"
                 name="mobile"
-                pattern="[6789][0-9]{9}"
-                title="Please enter valid phone number"
+                error={mobileNumberError}
                 required
                 fullWidth
-                onChange={handleChange}
+                onChange={handleMobileNumberChange}
                 // value={userDetails.number}
               />
               <FormControl fullWidth>
@@ -130,7 +133,7 @@ function EnterDetails(props) {
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                   label="College"
-                  value={college}
+                  value={collegeName}
                   onChange={handleCollege}
                 >
                   <MenuItem
@@ -141,7 +144,7 @@ function EnterDetails(props) {
                   <MenuItem value={"Other"}>Other</MenuItem>
                 </Select>
               </FormControl>
-              {college == "Other" ? (
+              {collegeName === "Other" ? (
                 <TextField
                   id="outlined-basic"
                   label="College Name"
@@ -154,13 +157,11 @@ function EnterDetails(props) {
                   // value={userDetails.number}
                 />
               ) : null}
-              {(!details.name || !username || !college || !details.mobile) && (
+              {(!name || !username || !collegeName || !mobileNumber) && (
                 <p>Please fill all required fields</p>
               )}
               <button
-                disabled={
-                  !details.name || !username || !college || !details.mobile
-                }
+                disabled={!name || !username || !collegeName || !mobileNumber}
                 className="participate"
                 type="submit"
               >

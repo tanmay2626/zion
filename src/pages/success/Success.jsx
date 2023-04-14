@@ -19,8 +19,8 @@ export default function Success() {
   };
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (!token) {
+    const id = localStorage.getItem("id");
+    if (!id) {
       navigate("/details");
     }
   }, [navigate]);
