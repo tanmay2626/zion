@@ -77,32 +77,20 @@ function Team() {
           <h3>Marketing</h3>
           <div class="team-members">
             <TeamCard
-              src={"images/team/Kanishka Kulkarni.jpg"}
-              name="Kanishka Kulkarni"
+              src={"images/team/Kanishk Kulkarni.jpeg"}
+              name="Kanishk Kulkarni"
             />
-            <TeamCard
-              src={"images/team/Devang Handoo.jpg"}
-              name="Devang Handoo"
-            />
-            <TeamCard
-              src={"images/team/Mahadev Kashid.jpg"}
-              name="Mahadev Kashid"
-            />
+            <TeamCard src={"images/team/icon.jpeg"} name="Devang Handoo" />
+            <TeamCard src={"images/team/icon.jpeg"} name="Mahadev Kashid" />
           </div>
           <h3>Campaigning</h3>
           <div class="team-members">
-            <TeamCard
-              src={"images/team/Rahul Pandit.jpg"}
-              name="Rahul Pandit"
-            />
+            <TeamCard src={"images/team/icon.jpeg"} name="Rahul Pandit" />
             <TeamCard
               src={"images/team/Yashwant Jadhav .jpg"}
               name="Yashwant Jadhav"
             />
-            <TeamCard
-              src={"images/team/Shreyas Udavant.jpg"}
-              name="Shreyas Udavant"
-            />
+            <TeamCard src={"images/team/icon.jpeg"} name="Shreyas Udavant" />
           </div>
           <h3>Editor</h3>
           <div class="team-members">

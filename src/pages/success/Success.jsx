@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./success.scss";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 export default function Success() {
@@ -46,9 +46,6 @@ export default function Success() {
           alt="clipboard"
         />
       </div>
-      <Link to="/">
-        <p>Home</p>
-      </Link>
     </section>
   );
 }
