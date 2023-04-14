@@ -153,11 +153,15 @@ function EnterDetails(props) {
                   // value={userDetails.number}
                 />
               ) : null}
-              {(!name || !username || !collegeName || !mobileNumber) && (
-                <p>Please fill all required fields</p>
-              )}
+              {(!name ||
+                !username ||
+                !collegeName ||
+                !mobileNumber ||
+                !email) && <p>Please fill all required fields</p>}
               <button
-                disabled={!name || !username || !collegeName || !mobileNumber}
+                disabled={
+                  !name || !username || !collegeName || !mobileNumber || !email
+                }
                 className="participate"
                 type="submit"
               >
