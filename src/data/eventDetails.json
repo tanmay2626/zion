@@ -10,7 +10,7 @@
         "prizePool" : "₹6,000",
         "price" : "200",
         "groupOrPerson" : "group",
-        "minMembers" : "1",
+        "minMembers" : "3",
         "maxMembers" : "4",
         "desc" : "Think Tank is a platform for the participants to pitch their technical product idea in efficient way. Pitching of their product or idea must be done with the help of presentation, tagline and a marketing skit."
     },
