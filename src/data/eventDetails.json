@@ -1,6 +1,20 @@
 {
   "eventDetails": [
     {
+        "eventid" : "5",
+        "src" : "./images/events/thinktank.jpg",
+        "title" : "Think Tank",
+        "date" : "19 April 2023",
+        "time" : "5 hours",
+        "location" : "DYPIT, Pimpri",
+        "prizePool" : "₹6,000",
+        "price" : "200",
+        "groupOrPerson" : "group",
+        "minMembers" : "1",
+        "maxMembers" : "4",
+        "desc" : "Think Tank is a platform for the participants to pitch their technical product idea in efficient way. Pitching of their product or idea must be done with the help of presentation, tagline and a marketing skit."
+    },
+    {
         "eventid" : "0",
         "src" : "https://cosmosgroup.sgp1.cdn.digitaloceanspaces.com/news/9608604.webp",
         "title" : "Neo Coding",
@@ -28,20 +42,7 @@
         "maxMembers" : "4",
         "desc" : "This is a bridge-making event where participants form groups, select a leader, and construct a bridge model using provided materials within a two-hour timeframe. Deviations from given dimensions and materials will result in disqualification. The goal is to construct a functional bridge model."
     },
-    {
-        "eventid" : "5",
-        "src" : "./images/events/thinktank.jpg",
-        "title" : "Think Tank",
-        "date" : "19 April 2023",
-        "time" : "5 hours",
-        "location" : "DYPIT, Pimpri",
-        "prizePool" : "₹6,000",
-        "price" : "200",
-        "groupOrPerson" : "group",
-        "minMembers" : "1",
-        "maxMembers" : "4",
-        "desc" : "Think Tank is a platform for the participants to pitch their technical product idea in efficient way. Pitching of their product or idea must be done with the help of presentation, tagline and a marketing skit."
-    },
+
     {
         "eventid" : "6",
         "src" : "./images/events/offroadrumble.jpeg",
