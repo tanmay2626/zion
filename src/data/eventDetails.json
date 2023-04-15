@@ -30,7 +30,7 @@
     },
     {
         "eventid" : "5",
-        "src" : "./images/events/thinktank.jpeg",
+        "src" : "./images/events/thinktank.jpg",
         "title" : "Think Tank",
         "date" : "19 April 2023",
         "time" : "5 hours",
@@ -40,7 +40,7 @@
         "groupOrPerson" : "group",
         "minMembers" : "1",
         "maxMembers" : "4",
-        "desc" : "Elevate your business at Think Tank - present products, discuss market trends, and create winning marketing strategies in three challenging rounds. Gain recognition, network with peers, and get valuable business insights. Register now for the ultimate event for entrepreneurs and startup owners!"
+        "desc" : "Think Tank is a platform for the participants to pitch their technical product idea in efficient way. Pitching of their product or idea must be done with the help of presentation, tagline and a marketing skit."
     },
     {
         "eventid" : "6",
@@ -99,7 +99,7 @@
     },
     {
         "eventid" : "2",
-        "src" : "./images/events/hashitout.jpeg",
+        "src" : "./images/events/hashitout.png",
         "title" : "Hash it Out",
         "date" : "20 April 2023",
         "time" : "5 hours",
@@ -109,7 +109,7 @@
         "groupOrPerson" : "group",
         "minMembers" : "2",
         "maxMembers" : "4",
-        "desc" : "Hash It Out is a two-round programming event that tests coding enthusiasts' knowledge and skills. Round one has two coding questions, while round two has advanced questions. It's a great opportunity for programmers to network and learn new skills. The event promises exciting challenges and valuable prizes. Join us for a thrilling coding experience by registering now!"
+        "desc" : "Hash It Out is a 6-hour hackathon that focuses on two domains: web development and android development. This event is designed to bring together enthusiastic coders and developers to collaborate and create innovative solutions for real-world challenges. Participants will have the opportunity to network, build projects, and learn new skills. With challenging problem statements and exciting prizes, Hash It Out promises to be an exhilarating experience for all participants."
     },
     {
         "eventid" : "9",

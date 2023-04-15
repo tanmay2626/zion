@@ -61,7 +61,7 @@ function EnterDetails(props) {
     localStorage.setItem("details", JSON.stringify(data));
 
     axios
-      .post(process.env.REACT_APP_REGISTER_URL, {
+      .post("https://actualone.actual01.xyz/api/zion", {
         name,
         username,
         email,
@@ -72,7 +72,13 @@ function EnterDetails(props) {
         }
       })
       .catch((error) => {
-        setError(error.response.data.error);
+        if (error.response && error.response.status === 404) {
+          // Handle the 404 error here
+          console.error("404 error: Resource not found");
+        } else {
+          // Handle other errors here
+          console.error(error);
+        }
       });
   };
 
