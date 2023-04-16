@@ -97,6 +97,10 @@ function Team() {
               src={"images/team/Shreyas Udawant.jpg"}
               name="Shreyas Udawant"
             />
+            <TeamCard
+              src={"images/team/Robin Kumar Singh.jpg"}
+              name="Robin Kumar Singh"
+            />
           </div>
           <h3>Editor</h3>
           <div class="team-members">
