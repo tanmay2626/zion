@@ -70,6 +70,20 @@
             "desc": "Tech Feud is a 3-round Technical Quiz which is based on the popular TV show “Family Feud” but with technical questions.Two teams would compete against each other with techinal questions, the team to press the buzzer in front of them first, would answer the asked question first"
         },
         {
+            "eventid": "19",
+            "src": "./images/events/Simulator.png",
+            "title": "F1 Simulator",
+            "date": "19 & 20 & 21 April 2023",
+            "time": "Whole day",
+            "location": "DYPIT Parking, Pimpri",
+            "prizePool": "₹10,000",
+            "price": "0",
+            "groupOrPerson": "person",
+            "minMembers": "1",
+            "maxMembers": "1",
+            "desc": "Formula 1 is the world’s most prestigious motor racing competition, as well as the world’s most popular annual sporting series. Many young racing enthusiasts watch this sport passionately. Many of the Enthusiasts eager to feel that thrilling experience of driving a Formula 1 car. In this event, Students can experience the same amount of thrill here on the Simulator, where 'F1' an official game of Formula 1 racing can be played. This will give you the same experience as driving a Formula 1 race car."
+        },
+        {
             "eventid": "0",
             "src": "https://cosmosgroup.sgp1.cdn.digitaloceanspaces.com/news/9608604.webp",
             "title": "Neo Coding",
