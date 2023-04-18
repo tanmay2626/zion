@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import RegisterCard from "../../components/RegisterCard/RegisterCard";
 import "./register.scss";
 import eventDetails from "../../data/eventDetails.json";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 function Register() {
@@ -62,6 +62,14 @@ function Register() {
             Let's Participate {">>"}
           </button>
         </form>
+        <div>
+          <Link
+            className="rule-book"
+            to="https://drive.google.com/drive/folders/1UmY4nRtZJPsPDJtgt8wdMP5DykdSnMuH"
+          >
+            <h3>Rule Book</h3>
+          </Link>
+        </div>
       </section>
       <Footer />
       <div
