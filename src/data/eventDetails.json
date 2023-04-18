@@ -15,6 +15,19 @@
             "desc": "Think Tank is a platform for the participants to pitch their technical product idea in efficient way. Pitching of their product or idea must be done with the help of presentation, tagline and a marketing skit."
         },
         {
+            "eventid": "20",
+            "src": "./images/events/Actual.jpeg",
+            "title": "Actual Hack",
+            "date": "19 April 2023",
+            "time": "12:00PM - 6:00PM",
+            "location": "DYPIT, Pimpri",
+            "prizePool": "$5,000",
+            "price": "0",
+            "minMembers": "1",
+            "maxMembers": "1",
+            "desc": "Hackathon on Web 3 and Web 2 winner will be awarded with 5000 USD"
+        },
+        {
             "eventid": "3",
             "src": "./images/events/bridgemania.jpeg",
             "title": "Bridge Mania",
