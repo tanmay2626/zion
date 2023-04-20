@@ -68,7 +68,7 @@ function EnterDetails(props) {
       })
       .then((res) => {
         if (res.status === 200 || res.status === 201) {
-          navigate("/register");
+          navigate("/finished");
         }
       })
       .catch((error) => {

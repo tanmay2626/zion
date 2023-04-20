@@ -13,6 +13,7 @@ import Register from "./pages/register/Register";
 import EnterDetails from "./pages/enterDetails/EnterDetails";
 import Payment from "./pages/payment/Payment";
 import Success from "./pages/success/Success";
+import Finished from "./pages/finished/Finished";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/details" element={<EnterDetails />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/success" element={<Success />} />
+        <Route path="/finished" element={<Finished />} />
       </Switch>
     </Router>
   );
