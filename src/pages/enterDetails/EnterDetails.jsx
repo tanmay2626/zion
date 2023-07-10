@@ -59,27 +59,7 @@ function EnterDetails(props) {
       name: name,
     };
     localStorage.setItem("details", JSON.stringify(data));
-
-    axios
-      .post("https://actualone.actual01.xyz/api/zion", {
-        name,
-        username,
-        email,
-      })
-      .then((res) => {
-        if (res.status === 200 || res.status === 201) {
-          navigate("/finished");
-        }
-      })
-      .catch((error) => {
-        if (error.response && error.response.status === 404) {
-          // Handle the 404 error here
-          console.error("404 error: Resource not found");
-        } else {
-          // Handle other errors here
-          console.error(error);
-        }
-      });
+    navigate("/finished");
   };
 
   const token = localStorage.getItem("token");
