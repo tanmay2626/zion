@@ -59,7 +59,7 @@ function EnterDetails(props) {
       name: name,
     };
     localStorage.setItem("details", JSON.stringify(data));
-    navigate("/finished");
+    navigate("/register");
   };
 
   const token = localStorage.getItem("token");
